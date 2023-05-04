@@ -1,0 +1,47 @@
+.nav-bar{
+    padding: 40px;
+    display: inline;
+    color: rgb(34, 13, 107);
+    font-size: 1.5rem;
+    background-image: linear-gradient(
+        to right,
+        white 50%,
+        white 50%,
+        white 50%
+      );
+      position: relative;
+      background-clip: initial;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+}
+#nav-ul{
+    list-style: none;
+    display: flex;
+}
+.nav-bar:before{
+    content:url('about.html') url('project.html') url('skills.html') url('services.html');
+    background: lightblue;
+    bottom: 25px;
+    width: 0;
+    height: 3px;
+    left: 30px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.nav-bar:hover{
+    background-position: 0;
+}
+.nav-bar:hover::before{
+    width: 60%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 30px 40px;
+}
+a{
+    color: white;
+}
