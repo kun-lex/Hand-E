@@ -1,11 +1,9 @@
-import '/src/App.css'
-import Navbar from '../components/Navbar'
+import '../components/App.css'
 
 export default function Login(){
     return(
-        <Navbar />,
         <div>
-            
+            <h1>This is a test</h1>
         </div>
     )
 }

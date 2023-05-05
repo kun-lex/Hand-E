@@ -68,13 +68,13 @@ h2 {
   place-items: center;
   width: 72px;
   height: 72px;
-  background-image: url("./icons/menu.svg");
+  background-image: url("./components/icons/menu.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 body.open .burger {
-  background-image: url("./icons/close.svg");
+  background-image: url("./components/icons/close.svg");
 }
 
 @media (width >= 500px) {

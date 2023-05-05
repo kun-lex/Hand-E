@@ -1,6 +1,7 @@
 // import myFunction from './Toggle';
 import chevron from './icons/chevron.svg';
 import './App.css';
+import { Link } from 'react-router-dom';
 export default function Navbar(){
   // dropdown burger
 
@@ -16,10 +17,12 @@ export default function Navbar(){
           
           <div class="dropdowns">
           <div class="dropdown">
+            <Link to="/login">
             <button>
             Home service
             <img src={chevron}  alt="chevron"/>
             </button>
+            </Link>
             <div class="dropdown-menu">
               <div>
                 <h2>Digital</h2>
