@@ -220,12 +220,12 @@ button > img {
 
 .search {
   /* display: flex; */
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   margin-top: 10%;
   margin-right: 50%;
 }
-input.search-bar {
+.search-bar {
   border: none;
   outline: none;
   padding: 1.1rem;
@@ -238,14 +238,14 @@ input.search-bar {
   box-shadow: 0px 3px 10px 5px #0d0d0e;
 }
 .searchbutton {
-  /* margin: 0.1em; */
+  margin: auto;
   padding: 1rem;
   /* border-radius: 50%; */
   border: none;
   /* height: 50px;
   width: 50px; */
   outline: none;
-  background: red;
+  background: #081E40;
   color: white;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -259,7 +259,6 @@ input.search-bar {
   list-style: none;
   justify-content: space-between;
   margin-left: 0%;
-  
 }
 /* .card {
   background: #000000d0;

@@ -1,7 +1,7 @@
 // import myFunction from './Toggle';
 import chevron from './icons/chevron.svg';
 import './App.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 export default function Navbar(){
   // dropdown burger
 
@@ -13,40 +13,32 @@ export default function Navbar(){
           <button onClick={toggleMenu} class="burger">
           </button>
 
-          <div class="nav-title"><h1>Handy</h1></div>
+          <div class="nav-title"><h1>Reba</h1></div>
           
           <div class="dropdowns">
           <div class="dropdown">
-            <Link to="/login">
             <button>
-            Home service
+            Auto Services
             <img src={chevron}  alt="chevron"/>
             </button>
-            </Link>
             <div class="dropdown-menu">
               <div>
-                <h2>Digital</h2>
-                <button>Learn CSS Ebook</button>
-                <button>Security Course</button>
-                <button>Masterclass Bundle</button>
+                <button>Auto Repair</button>
+                <button>Auto Detailing</button>
+                <button>Car Wash</button>
+                <button>Towing</button>
               </div>
               <div>
-                <h2>Electronic</h2>
-                <button>CSS Digital Clock</button>
-                <button>UX Master Mouse</button>
-                <button>Type Fast Keyboard</button>
-              </div>
-              <div>
-                <h2>Documents</h2>
-                <button>Email Template</button>
-                <button>Desktop Wallpaper</button>
-                <button>Portfolio Code</button>
+                <button>Oil Change</button>
+                <button>Car Dealer</button>
+                <button>Parking</button>
+                <button>Body Shop</button>
               </div>
             </div>
           </div>
             <div class="dropdown">
               <button>
-                Resturants
+                Home Services
                 <img src={chevron}  alt="chevron" />
               </button>
               <div class="dropdown-menu">
@@ -59,7 +51,7 @@ export default function Navbar(){
             </div>
             <div class="dropdown">
               <button>
-                Auto service
+                Find Place
                 <img src={chevron}  alt="chevron" />
               </button>
               <div class="dropdown-menu">
