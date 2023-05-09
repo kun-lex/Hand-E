@@ -7,14 +7,10 @@ export default function Main() {
       <div>
         <div class="search">
           <button class="Cate-button">Category <img src={chevron}  alt="chevron"/> </button>
-          <ul class = "search-ul">
-            <li>
+          <div class = "search-ul">
               <input type="text" class="search-bar" placeholder="Location"/>
-            </li>
-            <li>
               <button class="searchbutton"> <img src={search}  alt="search" /> </button>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </main>
