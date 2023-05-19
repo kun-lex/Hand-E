@@ -1,6 +1,7 @@
 import '../components/App.css'
 import Log from '../components/icons/log.svg';
 import $ from 'jquery';
+import Navbar from '../components/Navbar'
 
 export default function Login(){
     function Log_ani(){
@@ -13,6 +14,7 @@ export default function Login(){
     }
     return(
         <div>
+            <Navbar />
             <div class="container">
             <div class="box"></div>
             <div class="container-forms">
