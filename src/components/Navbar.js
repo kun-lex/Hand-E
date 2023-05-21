@@ -1,5 +1,6 @@
 // import myFunction from './Toggle';
 import chevron from './icons/chevron.svg';
+import group_five from './images/Group 5.png';
 import './App.css';
 import { Link } from "react-router-dom";
 // import { Link } from 'react-router-dom';
@@ -11,7 +12,7 @@ export default function Navbar(){
   };
     return(
       <nav class="navbar">
-        <div class="nav-title"><h1>Reba</h1></div>
+        <div class="nav-title"><h1>Reba <img  src={group_five} alt="logo" /> </h1></div>
           
         <div class="dropdowns">
           <div class="dropdown">
