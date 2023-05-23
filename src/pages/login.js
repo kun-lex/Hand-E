@@ -1,5 +1,5 @@
 import '../components/App.css'
-import Log from '../components/icons/log.svg';
+// import Log from '../components/icons/log.svg';
 import $ from 'jquery';
 import Navbar from '../components/Navbar'
 
@@ -52,6 +52,8 @@ export default function Login(){
                         <div class="btn">
                         Log in
                         </div>
+                        <div class="or-line"> <div class="hr-line"></div> <p>or</p> <div class="hr-line"></div> </div>
+                        <button class="sign-with-google">Sign in with Google</button>
                     </div>
                     </div>
                 </div>
@@ -62,13 +64,14 @@ export default function Login(){
                         <div class="btn">
                         Sign up
                         </div>
+                        <div class="or-line"> <div class="hr-line"></div> <p>or</p> <div class="hr-line"></div> </div>
+                        <button class="sign-with-google">Sign in with Google</button>
                     </div>
                     </div>
                 </div>
-                </div>
             </div>
             </div>
-            <a class="box-item" href="#log" target="_blank"><img src={Log} alt="log" /></a>
+            </div>
             <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
         </div>
     )

@@ -450,6 +450,39 @@ button{
   color: white;
 } */
 
+p{
+  color: white;
+}
+
+.hr-line{
+  width: 120px;
+  height: 0px;
+  left: 321px;
+  top: 639px;
+  mix-blend-mode: exclusion;
+  border: 3px solid #103870;
+}
+
+.or-line{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sign-with-google{
+  width: 303px;
+  height: 52px;
+  left: 361px;
+  top: 675px;
+  color: white;
+  background: #181717;
+  mix-blend-mode: screen;
+  border: 1px solid #103870;
+  border-radius: 32px;
+  font-family: 'Inter';
+  text-align: center;
+  margin: 0 auto;
+}
+
 .table {
   display: table;
   width: 100%;
@@ -466,12 +499,12 @@ button{
 }
 
 .container {
-  position: relative;
+  position: absolute;
   width: 600px;
-  margin: 30px auto 0;
+  margin: 30px 25% 0;
   height: 320px;
   background-color: #999ede;
-  top: 50%;
+  top: 60%;
   margin-top: -160px;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -514,9 +547,11 @@ button{
   cursor: pointer;
   text-align: center;
   margin: 0 auto;
-  width: 60px;
+  width: 109px;
   color: #fff;
-  background-color: #ff73b3;
+  background: #181717;
+  mix-blend-mode: screen;
+  border: 1px solid #453C3C;
   opacity: 1;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -533,6 +568,8 @@ button{
   margin: 0 auto 15px;
   display: block;
   width: 220px;
+  background: #FFFFFF;
+  mix-blend-mode: soft-light;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -549,7 +586,7 @@ button{
   height: 320px;
   display: inline-block;
   vertical-align: top;
-  color: #fff;
+  background: #081E40;
   opacity: 1;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -578,7 +615,7 @@ button{
   top: -30px;
   width: 305px;
   height: 380px;
-  background-color: #fff;
+  background: #3E678D;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
