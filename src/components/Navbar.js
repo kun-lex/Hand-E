@@ -12,7 +12,9 @@ export default function Navbar(){
   };
     return(
       <nav className="navbar">
+        <Link to='/'>
         <div className="nav-title"><h1>Reba <img  src={group_five} alt="logo" /> </h1></div>
+        </Link>
           
         <div className="dropdowns">
           <div className="dropdown">
@@ -63,10 +65,10 @@ export default function Navbar(){
           </div>
         </div>
         <div className="Log_btn">
-            <Link to="/login">
-              <button>Log In</button>
-            </Link>
-          <div><button>Sign Up</button></div>
+          <Link to="/login">
+            <button className="none-decor">Log In</button>
+          </Link>
+          <button>Sign Up</button>
         </div>
         <button onClick={toggleMenu} className="burger"> </button>
       </nav>

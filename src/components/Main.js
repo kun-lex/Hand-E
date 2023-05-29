@@ -24,8 +24,9 @@ export default function Main() {
 
   return(
     <main>
-      <div>
-        <div class="search">
+      <div className="flex-container">
+      <div className='search-side'>
+      <div class="search">
           <div class="dropdown-b">
             <button onClick={myFunction} class="dropbtn">Category <img src={chevron}  alt="chevron" /></button>
             <div id="myDropdown" class="dropdown-content">
@@ -53,6 +54,8 @@ export default function Main() {
           <button>Learn More</button>
         </div>
         </div>
+      </div>
+      <div className='review-side'></div>
       </div>
     </main>
   )

@@ -2,28 +2,30 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #666565;
+  background-color: rgb(221, 221, 221);
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* .nav-title{
-  margin-left: px;
-} */
+.nav-title{
+  margin-left: 50px;
+  height: 100%;
+}
 button {
+  width: auto;
   border: 0;
-  padding: 0;
+  padding: 50px;
   background: transparent;
   cursor: pointer;
-  line-height: 1;
+  line-height: 0;
   color: inherit;
   font-family: "Euclid Circular A";
-  font-size: 16px;
+  font-size: 10px;
   display: flex;
   align-items: center;
   text-align: left;
-  gap: 4px;
+  gap: 0px;
   padding: 0;
-  height: 100%;
+  height: 50%;
   opacity: 0.6;
 }
 
@@ -149,11 +151,12 @@ button > img {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media (width >= 500px) {
   .dropdown {
+    width: fit-content;
     height: 100%;
     flex-direction: row;
     align-items: center;
@@ -176,7 +179,7 @@ button > img {
   }
 
   .dropdown:hover {
-    background: #294bbb;
+    background: #284b80;
   }
 
   .dropdown:hover .dropdown-menu {
@@ -227,6 +230,12 @@ button > img {
   position: relative;
   display: flex;
   margin-right: 30px;
+  text-decoration: none;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 
@@ -236,7 +245,7 @@ button > img {
   /* align-items: center;
   justify-content: center; */
   margin-top: 10%;
-  margin-left: 169px;
+  margin-left: 100px;
 }
 input.search-bar {
   border: none;
@@ -248,8 +257,8 @@ input.search-bar {
   font-size: 105%;
   width: 30%;
   background: #FFFFFF;
-  mix-blend-mode: soft-light;
-  box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid #A5A3A3;
+  border-radius: 1px;
 }
 .searchbutton {
   /* margin: 0.1em; */
@@ -336,119 +345,21 @@ input.search-bar {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-/* .card {
-  background: #000000d0;
-  color: white;
-  padding: 14em;
-  width: 45%;
-  height: 100%;
-  margin-top: 11%;
-  margin-left: 7%;
-}
-
-
-
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-#myInput {
-  box-sizing: border-box;
-  background-image: url('./icons/search.svg');
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-#myInput:focus {outline: 3px solid #ddd;}
-
-.cate-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.cate-dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-.Card-button{
-  padding: 40px;
-  display: inline;
-  color: rgb(34, 13, 107);
-  font-size: 1.5rem;
-  background-image: linear-gradient(
-      to right,
-      white 50%,
-      white 50%,
-      white 50%
-    );
-    position: relative;
-    background-clip: initial;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-}
-#nav-ul{
-  list-style: none;
+.flex-container{
   display: flex;
 }
-.Card-button:before{
-  content:'';
-  background: lightblue;
-  bottom: 25px;
-  width: 0;
-  height: 3px;
-  left: 30px;
-  position: absolute;
-  transition: all 0.3s ease-in-out;
+.search-side{
+  width: 80%;
 }
-.Card-button:hover{
-  background-position: 0;
+.review-side{
+  margin: 0;
+  margin-top: 20px;
+  width: 20%;
+  height: 450px;
+  left: 1151px;
+  background: #081E40;
+  border-radius: 22px 1px 0px 22px;
 }
-.Card-button:hover::before{
-  width: 60%;
-}
-.Card-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  padding: 30px 40px;
-  list-style: none;
-  display: flex;
-}
-button{
-  color: white;
-} */
 
 p{
   color: white;
