@@ -7,7 +7,7 @@ body{
   background-repeat: no-repeat;
 }
 .nav-title{
-  margin-left: 50px;
+  margin-left: 10px;
   height: 100%;
 }
 button {
@@ -61,7 +61,7 @@ h2 {
   left: 0;
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 60px;
   background: #081E40;
   color: #f9f9f9;
   box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
@@ -232,6 +232,15 @@ button > img {
   margin-right: 30px;
   text-decoration: none;
 }
+.sign-up-btn{
+  width: 66px;
+  height: 25px;
+  background: rgb(75, 98, 139);
+  border-radius: 19.5px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
 a:-webkit-any-link {
   text-decoration: none;
   color: white;
@@ -351,6 +360,50 @@ input.search-bar {
 .search-side{
   width: 80%;
 }
+.work-text{
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 71px;
+  color: #081E40;
+}
+h2{
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  color: #403f3f;
+}
+.Learn-btn{
+  width: 139px;
+  height: 37px;
+  background: #081E40;
+  border-radius: 14.5px;
+  align-content: center;
+  justify-content: center;
+  color: white;
+}
+.review-title{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-decoration-line: underline;
+  color: white;
+}
+.review-search-btn{
+  width: 155px;
+  height: 29px;
+  background: #FFFFFF;
+  mix-blend-mode: soft-light;
+  border-radius: 19.5px;
+  align-content: center;
+  justify-content: center;
+}
 .review-side{
   margin: 0;
   margin-top: 20px;
@@ -362,6 +415,21 @@ input.search-bar {
 }
 
 p{
+  color: white;
+}
+
+/* Second page sytle */
+
+.second-page{
+  background: #9d9d9d;
+}
+.nav2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  width: 20%;
   color: white;
 }
 

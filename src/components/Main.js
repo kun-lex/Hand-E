@@ -46,16 +46,29 @@ export default function Main() {
           </div>
         </div>
         <div class="search">
-        <h1>Work with us</h1>
+        <h1 className='work-text'>Work with us</h1>
         <div>
           <h2>Get More From Your <br/> 
             Profession
           </h2>
-          <button>Learn More</button>
+          <button className='Learn-btn'>Learn More</button>
         </div>
         </div>
       </div>
-      <div className='review-side'></div>
+      <div className='review-side'>
+        <p className='review-title'>Leave a review</p>
+        <input className='review-search-btn' placeholder='search' ></input>
+        <p>Your opinion matters<br/>to us!</p>
+      </div>
+      </div>
+      <div className='second-page'>
+        <h2>Recent Activity</h2>
+        <div className='nav2'>
+          <button>Nearby</button>
+          <button>Friends</button>
+          <button>Following</button>
+        </div>
+        <p>jogh</p>
       </div>
     </main>
   )

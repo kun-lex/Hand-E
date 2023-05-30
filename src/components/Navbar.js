@@ -52,7 +52,7 @@ export default function Navbar(){
           </div>
           <div className="dropdown">
             <button>
-              Find Place
+              Reba For Business
               <img src={chevron}  alt="chevron" />
             </button>
             <div class="dropdown-menu">
@@ -68,7 +68,7 @@ export default function Navbar(){
           <Link to="/login">
             <button className="none-decor">Log In</button>
           </Link>
-          <button>Sign Up</button>
+          <button className='sign-up-btn'>Sign Up</button>
         </div>
         <button onClick={toggleMenu} className="burger"> </button>
       </nav>
