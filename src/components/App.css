@@ -364,7 +364,7 @@ input.search-bar {
   font-family: 'Forum';
   font-style: normal;
   font-weight: 400;
-  font-size: 64px;
+  font-size: 40px;
   line-height: 71px;
   color: #081E40;
 }
@@ -372,7 +372,7 @@ h2{
   font-family: 'Forum';
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 35px;
   color: #403f3f;
 }
@@ -396,22 +396,25 @@ h2{
   color: white;
 }
 .review-search-btn{
-  width: 155px;
-  height: 29px;
-  background: #FFFFFF;
-  mix-blend-mode: soft-light;
+  width: 189px;
+  height: 57px;
+  background: #183d74;
+  color: white;
   border-radius: 19.5px;
   align-content: center;
   justify-content: center;
 }
 .review-side{
   margin: 0;
-  margin-top: 20px;
+  margin-top: 40px;
   width: 20%;
-  height: 450px;
+  height: 500px;
   left: 1151px;
   background: #081E40;
   border-radius: 22px 1px 0px 22px;
+}
+.join-us{
+  margin-left: 30px;
 }
 
 p{

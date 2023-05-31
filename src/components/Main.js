@@ -1,6 +1,8 @@
 import './App.css';
 import search from './icons/search.svg';
 import chevron from './icons/chevron.svg';
+import profile_pic from './images/profilepic.png';
+import join_us from './images/join-us pic.png';
 export default function Main() {
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -45,20 +47,27 @@ export default function Main() {
               <button class="searchbutton"> <img src={search}  alt="search" /> </button>
           </div>
         </div>
+        <div class="d-flex">
         <div class="search">
         <h1 className='work-text'>Work with us</h1>
-        <div>
           <h2>Get More From Your <br/> 
             Profession
           </h2>
           <button className='Learn-btn'>Learn More</button>
         </div>
+        <div>
+        <img className='join-us' src={join_us} alt='join us' />
+        </div>
         </div>
       </div>
       <div className='review-side'>
         <p className='review-title'>Leave a review</p>
-        <input className='review-search-btn' placeholder='search' ></input>
         <p>Your opinion matters<br/>to us!</p>
+        <button className='review-search-btn'>Write a review</button>
+        <div><p className='review-title'>Top reviews</p></div>
+        <a class="navbar-brand" href="/">
+          <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
+        </a>
       </div>
       </div>
       <div className='second-page'>
