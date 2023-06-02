@@ -4,7 +4,7 @@ import logo from './images/logo.png';
 import './App.css';
 import { Link } from "react-router-dom";
 // import { Link } from 'react-router-dom';
-export default function user_navbar(){
+export default function User_navbar(){
   // dropdown burger
 
   function toggleMenu() {

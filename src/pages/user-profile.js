@@ -1,7 +1,7 @@
-import user_navbar from "../components/user_navbar"
+import User_navbar from "../components/User-navbar";
 
-export default function user_profile(){
+export default function User_profile(){
     return (
-        <user_navbar />
+        <User_navbar />
     )
 }
