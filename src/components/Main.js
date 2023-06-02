@@ -94,13 +94,29 @@ export default function Main() {
       </div>
       </div>
       <div className='second-page'>
-        <h2>Recent Activity</h2>
-        <div className='nav2'>
-          <button>Nearby</button>
-          <button>Friends</button>
-          <button>Following</button>
+        <div className='title-nav'>
+          <h2 style={{color:"white"}}>Recent Activity</h2>
         </div>
-        <p>jogh</p>
+        <div className='title-nav'>
+          <div className='nav2'>
+            <button>Nearby</button>
+            <button>Friends</button>
+            <button>Following</button>
+          </div>
+        </div>
+        <div className='review-blocks'>
+          <div className='block-1'>
+            <div className='d-flex'>
+              <a class="navbar-brand" href="/">
+                <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
+              </a>
+              <div>
+                <h6>David A.</h6>
+                <p>Wrote a review</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )
