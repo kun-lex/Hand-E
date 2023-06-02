@@ -61,13 +61,36 @@ export default function Main() {
         </div>
       </div>
       <div className='review-side'>
-        <p className='review-title'>Leave a review</p>
+        <div className="title-deco"><p className='review-title'>Leave a review</p></div>
+        
         <p>Your opinion matters<br/>to us!</p>
-        <button className='review-search-btn'>Write a review</button>
-        <div><p className='review-title'>Top reviews</p></div>
+        <div className="title-deco"><button className='review-search-btn'>Write a review</button></div>
+        <div className="title-deco"><p className='review-title'>Top reviews</p></div>
+        <div className='d-flex'>
         <a class="navbar-brand" href="/">
           <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
         </a>
+        <div className='top-review-content'>
+          <p>Akinola David</p>
+        </div>
+        </div>
+        <div className='d-flex'>
+        <a class="navbar-brand" href="/">
+          <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
+        </a>
+        <div className='top-review-content'>
+          <p>Akinola David</p>
+        </div>
+        </div>
+        <div className='d-flex'>
+        <a class="navbar-brand" href="/">
+          <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
+        </a>
+        <div className='top-review-content'>
+          <p>Akinola David</p>
+        </div>
+        </div>
+        
       </div>
       </div>
       <div className='second-page'>

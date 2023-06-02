@@ -395,6 +395,12 @@ h2{
   text-decoration-line: underline;
   color: white;
 }
+.title-deco{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .review-search-btn{
   width: 189px;
   height: 57px;
@@ -404,11 +410,17 @@ h2{
   align-content: center;
   justify-content: center;
 }
+.top-review-content{
+  width: 189px;
+  height: 75px;
+  background: #183d74;
+  border-radius: 22px;
+}
 .review-side{
   margin: 0;
   margin-top: 40px;
-  width: 20%;
-  height: 500px;
+  width: 25%;
+  height: 600px;
   left: 1151px;
   background: #081E40;
   border-radius: 22px 1px 0px 22px;
