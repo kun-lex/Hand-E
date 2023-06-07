@@ -718,3 +718,27 @@ p{
   height: 0%;
   opacity: 0;
 }
+
+/* slide css */
+
+#slider {
+  position: relative;
+  overflow: hidden;
+}
+
+#slider ul {
+  position: relative;
+  list-style: none;
+  height: 100%;
+  width: 10000%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+#slider ul li {
+  position: relative;
+  height: 100%;
+
+  float: left;
+}

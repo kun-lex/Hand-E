@@ -3,6 +3,8 @@ import search from './icons/search.svg';
 import chevron from './icons/chevron.svg';
 import profile_pic from './images/profilepic.png';
 import join_us from './images/join-us pic.png';
+import slide_2 from './images/slide 2.png';
+import slide_3 from './images/slide 3.png';
 export default function Main() {
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -23,6 +25,52 @@ export default function Main() {
       }
     }
   }
+
+  // might need to declare as global variable
+  
+  var slider = document.getElementById("slider")
+  var sliderWidth = slider.offsetWidth;
+  var slideList = document.getElementById("slideWrap");
+  var count = 1;
+  // might not need this
+  var items = slideList.querySelector("li").lenght;
+  var prev = document.getElementById("prev")
+  var next = document.getElementById("next");
+
+  window.addEventListener('resize', function() {
+    sliderWidth = slider.offsetWidth;
+  });
+  var prevSlide = function (){
+    if(count > 1) {
+      count = count - 2;
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+
+    else if (count = 1) {
+      count = items - 1;
+      slideList.style.left = "-" + count * sliderWidth + "px";
+      count++;
+    }
+  };
+  var nextSlide = function (){
+    if(count < items) {
+      slideList.style.left = "0px";
+      count = 1;
+    }
+  }
+  next.addEventListener("click", function() {
+    nextSlide();
+  });
+  prev.addEventListener("click", function() {
+    prevSlide();
+  });
+  setInterval(function() {
+    nextSlide()
+  }, 5000);
+  // window.onload = function() {
+  //   responsiveSlider();
+  // }
 
   return(
     <main>
@@ -55,8 +103,12 @@ export default function Main() {
           </h2>
           <button className='Learn-btn'>Learn More</button>
         </div>
-        <div>
-        <img className='join-us' src={join_us} alt='join us' />
+        <div id='slider'>
+          <ul id='slideWrap' >
+            <li><img className='join-us' src={join_us} alt='join us' /></li>
+            <li><img className='' src={slide_2} alt='join us' /></li>
+            <li><img className='' src={slide_3} alt='join us' /></li>
+          </ul>
         </div>
         </div>
       </div>
