@@ -46,7 +46,7 @@ export default function Main() {
           <button className='Learn-btn'>Learn More</button>
         </div>
         </div>
-        {/* <ImageSlider /> */}
+        <ImageSlider />
       </div>
       <div className='review-side'>
         <div className="title-deco"><p className='review-title'>Leave a review</p></div>

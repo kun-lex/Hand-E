@@ -69,15 +69,18 @@ const ImageSlider = () => {
         >
             <Slide 
             background = {{
-                backgroundImage: {join_us}
+                backgroundImage: {join_us},
+                backgroundAttachment : "fixed"
             }} />
             <Slide 
             background = {{
-                backgroundImage: {slide_2}
+                backgroundImage: {slide_2},
+                backgroundAttachment : "fixed"
             }} />
             <Slide 
             background = {{
-                backgroundImage: {slide_3}
+                backgroundImage: {slide_3},
+                backgroundAttachment : "fixed"
             }} />
         </HeroSlider>
     )
