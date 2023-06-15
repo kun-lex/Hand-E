@@ -18,32 +18,32 @@ const ImageSlider = () => {
         // var prev = document.getElementById("prev")
         // var next = document.getElementById("next");
 
-        window.addEventListener('resize', function() {
-            ImageSlider.offsetWidth;
-        });
-        var prevSlide = function (){
-        if(count > 1) {
-            prevSlide.count = count - 2;
-            prevSlide.style.left = "-" + count + "px";
-            count++;
-        }
+        // window.addEventListener('resize', function() {
+        //     ImageSlider.offsetWidth;
+        // });
+        // var prevSlide = function (){
+        // if(count > 1) {
+        //     prevSlide.count = count - 2;
+        //     prevSlide.style.left = "-" + count + "px";
+        //     count++;
+        // }
 
-        else if (count = 1) {
-            count =  1;
-            count.style.left = "-" + count  + "px";
-            count++;
-        }
-        else prevSlide();
-        };
-        var nextSlide = function (){
-        if(count < 4) {
-            nextSlide.style.left = "0px";
-            count = 1;
-        }
-        }
-        setInterval(function() {
-        nextSlide()
-        }, 5000);           
+        // else if (count = 1) {
+        //     count =  1;
+        //     count.style.left = "-" + count  + "px";
+        //     count++;
+        // }
+        // else prevSlide();
+        // };
+        // var nextSlide = function (){
+        // if(count < 4) {
+        //     nextSlide.style.left = "0px";
+        //     count = 1;
+        // }
+        // }
+        // setInterval(function() {
+        // nextSlide()
+        // }, 5000);           
     
     return(
         <div id="slider">
@@ -53,8 +53,6 @@ const ImageSlider = () => {
                     <li> <img src={slide_2} alt='join us' /> </li>
                     <li> <img src={slide_3} alt='join us' /> </li>
                 </ul>
-                {/* <a id="prev" href="#">&#8810;</a>
-                <a id="next" href="#">&#8811;</a> */}
             </div>
         </div>
     )
