@@ -466,7 +466,7 @@ p{
   transition: all 750ms ease;
   left: 0;
 }
-#slider ul li {
+.imagefloat {
   position: relative;
   height: 100%;
 

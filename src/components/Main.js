@@ -24,6 +24,7 @@ export default function Main() {
         />
         <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center '> <img src={search}  alt="search" /> </button>
       </div>
+      <ImageSlider />
       <div className="flex justify-center items center">
       <div className='search-side'>
       <div class="flex">
@@ -34,7 +35,6 @@ export default function Main() {
           </h2>
           <button className='Learn-btn'>Learn More</button>
         </div>
-        <ImageSlider />
         </div>
       </div>
       <div className='review-side'>
