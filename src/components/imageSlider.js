@@ -4,6 +4,19 @@ import slide_2 from './images/slide 2.png';
 import slide_3 from './images/slide 3.png';
 import './App.css';
 
+{/* <div class="dropdown-b">
+<button onClick={myFunction} class="dropbtn">Category <img src={chevron}  alt="chevron" /></button>
+<div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search Anything..." id="myInput" onkeyup={filterFunction} />
+    <a href="#about">Home Services</a>
+    <a href="#base">Auto Services</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="#custom">Custom</a>
+    <a href="#support">Support</a>
+    <a href="#tools">Tools</a>
+</div>
+</div> */}
 
 const ImageSlider = () => {
     const [ slide, setItem] = useState ({
@@ -49,9 +62,9 @@ const ImageSlider = () => {
         <div id="slider">
             <div id="slideWrap">
                 <ul>
-                    <li> <img src={join_us} alt='join us' /> </li>
-                    <li> <img src={slide_2} alt='join us' /> </li>
-                    <li> <img src={slide_3} alt='join us' /> </li>
+                    <li> <img className='w-50 h-50' src={join_us} alt='join us' /> </li>
+                    <li> <img className='w-50 h-50' src={slide_2} alt='join us' /> </li>
+                    <li> <img className='w-50 h-50' src={slide_3} alt='join us' /> </li>
                 </ul>
             </div>
         </div>

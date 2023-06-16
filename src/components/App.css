@@ -450,8 +450,8 @@ p{
 
 #slider {
   position: relative;
-    width: 500px;
-    height: 265px;
+    width: 270px;
+    height: 400px;
 
     overflow: hidden;
 }

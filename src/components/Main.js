@@ -13,45 +13,29 @@ export default function Main() {
 
   return(
     <main>
-      <div className='flex justify-center items center mt-16'>
+      <div className='flex justify-center items center mt-10'>
         <Select
-          className='w-[20%] h-9'
+          placeholder='Search anything'
+          className='w-[25%] h-9'
         />
         <input 
           type="text"
-          className="text-black w-[20%] h-9 rounded -[2px]" placeholder="Location"
+          className="text-black w-[25%] h-9 rounded -[2px]" placeholder="Location"
         />
-        <button className='bg-[#081E40] hover: bg-[#081E40] color-white ease-in-out duration-200 w-9 h-9 items-center justify-center '> <img src={search}  alt="search" /> </button>
+        <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center '> <img src={search}  alt="search" /> </button>
       </div>
       <div className="flex justify-center items center">
       <div className='search-side'>
+      <div class="flex">
       <div class="search">
-
-          {/* <div class="dropdown-b">
-            <button onClick={myFunction} class="dropbtn">Category <img src={chevron}  alt="chevron" /></button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search Anything..." id="myInput" onkeyup={filterFunction} />
-              <a href="#about">Home Services</a>
-              <a href="#base">Auto Services</a>
-              <a href="#blog">Blog</a>
-              <a href="#contact">Contact</a>
-              <a href="#custom">Custom</a>
-              <a href="#support">Support</a>
-              <a href="#tools">Tools</a>
-            </div>
-          </div> */}
-
-        </div>
-        <div class="flex">
-        <div class="search">
         <h1 className='work-text'>Work with us</h1>
           <h2>Get More From Your <br/> 
             Profession
           </h2>
           <button className='Learn-btn'>Learn More</button>
         </div>
-        </div>
         <ImageSlider />
+        </div>
       </div>
       <div className='review-side'>
         <div className="title-deco"><p className='review-title'>Leave a review</p></div>
