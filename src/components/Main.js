@@ -29,7 +29,6 @@ export default function Main() {
         />
         <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center '> <img src={search}  alt="search" /> </button>
       </div>
-      <ImageSlider className='.sliderimg' images={images} interval={3000} />
       <div className="flex justify-center items center">
       <div className='search-side'>
       <div class="flex">
@@ -42,6 +41,10 @@ export default function Main() {
         </div>
         </div>
       </div>
+      <ImageSlider 
+       images={images} 
+       interval={3000}
+      />
       <div className='review-side'>
         <div className="title-deco"><p className='review-title'>Leave a review</p></div>
         

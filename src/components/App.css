@@ -463,6 +463,6 @@ p{
   width: 10000%;
   padding: 0;
   margin: 0;
-  transition: all 750ms ease-in-out;
+  transition: all 3000ms ease;
   left: 0;
 }

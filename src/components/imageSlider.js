@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import './App.css'
 
-const ImageSlider = ({ images, interval = 3000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ImageSlider = ({ images, interval }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, interval);
 
     return () => {
@@ -16,7 +15,22 @@ const ImageSlider = ({ images, interval = 3000 }) => {
 
   return (
     <div className="slider">
-      <img src={images[currentIndex]} alt="join us" />
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`join us ${index + 1}`}
+          style={{
+            opacity: index === currentImageIndex ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+        />
+      ))}
     </div>
   );
 };
