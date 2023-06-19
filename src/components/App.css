@@ -448,52 +448,21 @@ p{
 
 /* slide css */
 
-#slider {
+.slider {
   position: relative;
-    width: 270px;
-    height: 400px;
+  width: 270px;
+  height: 400px;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
-#slider ul {
+.sliderimg {
   position: relative;
   list-style: none;
   height: 100%;
   width: 10000%;
   padding: 0;
   margin: 0;
-  transition: all 750ms ease;
+  transition: all 750ms ease-in-out;
   left: 0;
-}
-.imagefloat {
-  position: relative;
-  height: 100%;
-
-  float: left;
-}
-#slider #prev {
-  left: 10px;
-}
-#slider #next {
-  right: 10px;
-}
-
-#slider #prev:hover, #slider #next:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  text-shadow: 0;
-}
-#slider #prev, #slider #next {
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  border-radius: 50%;
-  font-size: 2rem;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  transform: translateY(-50%);
-  transition: all 150ms ease;
 }

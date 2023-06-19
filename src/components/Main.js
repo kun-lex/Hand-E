@@ -1,12 +1,17 @@
 import './App.css';
 import search from './icons/search.svg';
-import chevron from './icons/chevron.svg';
 import profile_pic from './images/profilepic.png';
 import ImageSlider from './imageSlider';
 import Select from 'react-select'
+import slide1 from './images/join-us pic.png'
+import slide2 from './images/slide 2.png'
+import slide3 from './images/slide 3.png'
 
 
 export default function Main() {
+  const images = [
+    slide1, slide2, slide3,
+  ];
 
 
   // might need to declare as global variable
@@ -24,7 +29,7 @@ export default function Main() {
         />
         <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center '> <img src={search}  alt="search" /> </button>
       </div>
-      <ImageSlider />
+      <ImageSlider className='.sliderimg' images={images} interval={3000} />
       <div className="flex justify-center items center">
       <div className='search-side'>
       <div class="flex">
