@@ -8,7 +8,7 @@ export default function Login(){
         <div>
             <Navbar />
             <div className='flex items-center justify-center mt-[100px]'>
-                <div className='flex'>
+                <div className=''>
                     <div>
                         <h1 style={{
                             color:"#081E40",
