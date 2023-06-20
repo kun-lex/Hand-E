@@ -1,8 +1,8 @@
 // import myFunction from './Toggle';
 import chevron from './icons/chevron.svg';
-import logo from './images/logo.png';
 import './App.css';
 import { Link } from "react-router-dom";
+import NewLogo from './images/Reba logo.png'
 // import { Link } from 'react-router-dom';
 export default function Navbar(){
   // dropdown burger
@@ -13,7 +13,7 @@ export default function Navbar(){
     return(
       <nav className="navbar">
         <Link to='/'>
-        <div className="nav-title"><img  src={logo} alt="logo" /></div>
+        <div className="nav-title"><img  src={NewLogo} alt="logo" /></div>
         </Link>
           
         <div className="dropdowns">
