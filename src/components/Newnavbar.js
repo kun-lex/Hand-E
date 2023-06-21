@@ -2,38 +2,31 @@ import NewLogo from './images/Reba logo.png'
 import { Link } from "react-router-dom";
 
 const NewNav = () =>{
+    function toggleMenu() {
+        var x = document.querySelector(".navbar .nav-links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
     return (
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-        <Link to='/'>
-            <div className="nav-title"><img  src={NewLogo} alt="logo" /></div>
-            </Link>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">Auto Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Auto Repair</a></li>
-                        <li><a class="dropdown-item" href="/">Auto Detailing</a></li>
-                        <li><a class="dropdown-item" href="/">Car Wash</a></li>
-                    </ul>
-                    
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown">Home Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Auto Repair</a></li>
-                        <li><a class="dropdown-item" href="/">Auto Detailing</a></li>
-                        <li><a class="dropdown-item" href="/">Car Wash</a></li>
-                    </ul>
-                    
-                </li>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                
-            </div>
-        </div>
+        <nav class="navbar">
+            <a class="logo" href="#">Logo</a>
+            <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Dropdown</a>
+                <div class="dropdown-content">
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+                </div>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onClick={toggleMenu}>&#9776;</a>
         </nav>
     )
 }

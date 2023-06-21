@@ -18,16 +18,20 @@ export default function Main() {
 
   return(
     <main>
-      <div className='flex justify-center items center mt-10'>
+      <div className='flex justify-center items-center flex-wrap mt-10'>
         <Select
+          style={{
+
+          }}
           placeholder='Search anything'
-          className='w-[25%] h-9'
+          className=' h-9 flex-[1_0_140px]'
         />
         <input 
           type="text"
-          className="text-black w-[25%] h-9 rounded -[2px]" placeholder="Location"
+          className="text-black w-[25%] h-9 rounded -[2px] flex-[1_0_140px]"
+          placeholder="Location"
         />
-        <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center '> <img src={search}  alt="search" /> </button>
+        <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center flex-[1_0_50px]'> <img src={search}  alt="search" /> </button>
       </div>
       <div className="flex justify-center items center">
       <div className='search-side'>

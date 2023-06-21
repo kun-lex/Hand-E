@@ -64,12 +64,10 @@ export default function Navbar(){
             </div>
           </div>
         </div>
-        <div className="Log_btn">
-          <Link to="/login">
-            <button className="none-decor">Log In</button>
-          </Link>
-          <button className='sign-up-btn'>Sign Up</button>
-        </div>
+        <Link to="/login">
+          <button className="sign-up-btn">Log In</button>
+        </Link>
+        <button className='sign-up-btn'>Sign Up</button>
         <button onClick={toggleMenu} className="burger"> </button>
       </nav>
     )
