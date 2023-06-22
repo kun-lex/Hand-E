@@ -65,9 +65,24 @@ export default function Navbar(){
           </div>
         </div>
         <Link to="/login">
-          <button className="sign-up-btn">Log In</button>
+          <button
+            style={{
+              width : '50px',
+              height: '30px',
+              color:'#081E40',
+            }}
+          >Log In</button>
         </Link>
-        <button className='sign-up-btn'>Sign Up</button>
+        <button
+          style={{
+            width : '70px',
+            height: '30px',
+            border:'1px solid #fff',
+            background:'#1D5EBF',
+            color:'white',
+            borderRadius:'19.5px'
+          }}
+        >Sign Up</button>
         <button onClick={toggleMenu} className="burger"> </button>
       </nav>
     )

@@ -220,15 +220,6 @@ button > img {
   margin-right: 30px;
   text-decoration: none;
 }
-.sign-up-btn{
-  width: 66px;
-  height: 25px;
-  background: rgb(75, 98, 139);
-  border-radius: 19.5px;
-  color: white;
-  align-items: center;
-  justify-content: center;
-}
 a:-webkit-any-link {
   text-decoration: none;
   color: white;
