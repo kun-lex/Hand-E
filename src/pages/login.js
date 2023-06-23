@@ -60,15 +60,19 @@ export default function Login(){
                                 display : 'flex',
                                 width : '106px',
                                 height : '36px',
-                                flexShrink : '0',
                                 borderRadius : '5px',
-                                background : '#1352B0',
+                                background :'#1352B0',
                                 color : 'white',
                                 alignItems : 'center',
                                 textAlign : 'center',
                                 fontFamily : 'Forum'
                             }}
                         >Sign In</button>
+                        <div className='flex w-auto items-center'>
+                            <div className='w-[70px] h-[1px] bg-zinc-700'></div>
+                            <h5>or</h5>
+                            <div className='w-[70px] h-[1px] bg-zinc-700'></div>
+                        </div>
                     </div>
                     <div className='w-[1px] h-[580px] bg-zinc-700'></div>
                     <img
