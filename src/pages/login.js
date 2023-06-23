@@ -73,6 +73,14 @@ export default function Login(){
                             <h5>or</h5>
                             <div className='w-[70px] h-[1px] bg-zinc-700'></div>
                         </div>
+                        <button
+                            style={{
+                                width: '352px',
+                                height: '62px',
+                                borderRadius: '32px',
+                                background: '#000',
+                            }}  
+                        >Sign in with Google</button>
                     </div>
                     <div className='w-[1px] h-[580px] bg-zinc-700'></div>
                     <img
