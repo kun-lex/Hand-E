@@ -8,7 +8,7 @@ const SearchBar = () => {
         setSearchTerm(e.target.value);
     };
     if (searchTerm.length > 0) {
-        adddata.filter((data) => {
+        addeddata.filter((data) => {
             return data.name.match(searchTerm);
         })
     }
@@ -24,7 +24,7 @@ const SearchBar = () => {
                 <tr>
                     <th>data</th>
                 </tr>
-                {adddata.map((data, index) =>{
+                {addeddata.map((data, index) =>{
                     <div>
                         <tr>
                             <td>{data.name}</td>
