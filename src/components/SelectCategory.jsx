@@ -20,17 +20,25 @@ const SelectCategory = () => {
             width : 100%;
         }
     `;
+    const FormSize = styled.button`
+        width : 70%
+    `;
     return(
         <WrapStyle>
-            <Select
-            placeholder='Search anything'
-            className='w-[50%]'
-            />
-            <input 
-            type="text"
-            className="text-black w-[50%] rounded-[2px]"
-            placeholder="Location"
-            />
+            <FormSize>
+                <Select
+                placeholder='Search anything'
+                className=''
+                />
+            </FormSize>
+            <FormSize>
+                <input 
+                    type="text"
+                    className="text-black  rounded-[2px]"
+                    placeholder="Location"
+                />
+            </FormSize>
+
             <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center'> <img src={search}  alt="search" /> </button>
         </WrapStyle>
     )
