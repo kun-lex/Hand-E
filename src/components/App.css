@@ -396,34 +396,7 @@ p{
   background: #d9d9d9;
   border-radius: 10px;
 }
-.hr-line{
-  width: 120px;
-  height: 0px;
-  left: 321px;
-  top: 639px;
-  mix-blend-mode: exclusion;
-  border: 3px solid #103870;
-}
 
-.or-line{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.sign-with-google{
-  width: 303px;
-  height: 52px;
-  left: 361px;
-  top: 675px;
-  color: white;
-  background: #181717;
-  mix-blend-mode: screen;
-  border: 1px solid #103870;
-  border-radius: 32px;
-  font-family: 'Inter';
-  text-align: center;
-  margin: 0 auto;
-}
 
 /* slide css */
 

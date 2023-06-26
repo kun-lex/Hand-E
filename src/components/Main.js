@@ -23,7 +23,7 @@ export default function Main() {
       <div class="flex">
       <div class="search">
         <h1 className='work-text'>Work with us</h1>
-          <h2>Get More From Your <br/> 
+          <h2 className='text-black'>Get More From Your <br/> 
             Profession
           </h2>
           <button className='Learn-btn'>Learn More</button>
