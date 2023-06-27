@@ -18,54 +18,22 @@ export default function Main() {
   return(
     <main>
       <SelectCategory/>
-      <div className="flex justify-center items center">
-      <div className='search-side'>
-      <div class="flex">
-      <div class="search">
-        <h1 className='work-text'>Work with us</h1>
-          <h2 className='text-black'>Get More From Your <br/> 
-            Profession
-          </h2>
-          <button className='Learn-btn'>Learn More</button>
+      <div className="flex justify-center items-center mt-[30px] ">
+        <div>
+          <div class="flex">
+            <div>
+              <h1 className='work-text'>Work with us</h1>
+              <h2 className='text-black'>Get More From Your <br/> 
+                Profession
+              </h2>
+              <button className=' w-[130px] h-[35px] bg-[#081E40] rounded-[15px] items-center justify-center text-white '>Learn More</button>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
-      <ImageSlider 
-       images={images} 
-       interval={3000}
-      />
-      {/* <div className='review-side'>
-        <div className="title-deco"><p className='review-title'>Leave a review</p></div>
-        
-        <p>Your opinion matters<br/>to us!</p>
-        <div className="title-deco"><button className='review-search-btn'>Write a review</button></div>
-        <div className="title-deco"><p className='review-title'>Top reviews</p></div>
-        <div className='d-flex'>
-        <a class="navbar-brand" href="/">
-          <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
-        </a>
-        <div className='top-review-content'>
-          <p>Akinola David</p>
-        </div>
-        </div>
-        <div className='d-flex'>
-        <a class="navbar-brand" href="/">
-          <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
-        </a>
-        <div className='top-review-content'>
-          <p>Akinola David</p>
-        </div>
-        </div>
-        <div className='d-flex'>
-        <a class="navbar-brand" href="/">
-          <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
-        </a>
-        <div className='top-review-content'>
-          <p>Akinola David</p>
-        </div>
-        </div>
-        
-      </div> */}
+        <ImageSlider 
+          images={images} 
+          interval={3000}
+        />
       </div>
       <div className='second-page'>
         <div className='title-nav'>

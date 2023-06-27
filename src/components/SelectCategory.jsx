@@ -24,17 +24,20 @@ const SelectCategory = () => {
         <WrapStyle>
             
             <Select
-            placeholder='Search anything'
-            className=''
+                placeholder='Search anything...'
+                components={{
+                    DropdownIndicator:() => null, IndicatorSeparator:() => null
+                }}
+                className='w-[25%]'
             />
         
             <input 
                 type="text"
-                className="text-black  rounded-[2px]"
+                className="text-black h-[35px] w-[25%] rounded-[5px]"
                 placeholder="Location"
             />
 
-            <button className='bg-[#081E40] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center'> <img src={search}  alt="search" /> </button>
+            <button className='bg-[#081E40] rounded-[5px] hover: bg-[#081E40] ease-in-out duration-200 w-9 h-9 items-center justify-center'> <img src={search}  alt="search" /> </button>
         </WrapStyle>
     )
 }
