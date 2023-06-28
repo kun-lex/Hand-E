@@ -12,14 +12,11 @@ export default function Main() {
     slide1, slide2, slide3,
   ];
 
-
-  // might need to declare as global variable
-
   return(
     <main>
       <SelectCategory/>
       <div className="flex justify-center items-center mt-[30px] ">
-        <div>
+        <div className='mr-[50px] '>
           <div class="flex">
             <div>
               <h1 className='work-text'>Work with us</h1>
