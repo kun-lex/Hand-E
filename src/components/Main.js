@@ -14,7 +14,9 @@ export default function Main() {
 
   return(
     <main>
-      <SelectCategory/>
+      <div className=' mt-[40px] '>
+        <SelectCategory/>
+      </div>
       <div className="flex justify-center items-center mt-[30px] ">
         <div className='mr-[50px] '>
           <div class="flex">

@@ -168,6 +168,7 @@ button > img {
     visibility: hidden;
     translate: 0 24px;
     transition: 0.3s;
+    border-radius: 10px;
   }
 
   .dropdown:hover .dropdown-menu {
