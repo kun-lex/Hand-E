@@ -10,22 +10,22 @@ export default function Navbar(){
     return(
       <nav className="navbar">
         <Link to='/'>
-        <div className="nav-title"><img  src={NewLogo} alt="logo" /></div>
+        <div className="nav-title ml-[10px] "><img  src={NewLogo} alt="logo" /></div>
         </Link>
           
         <div className="dropdowns">
           <div className="dropdown">
-            <button>
+            <a className='flex items-center text-[#081E40] cursor-pointer ' >
             Auto Services
             <img src={chevron}  alt="chevron"/>
-            </button>
+            </a>
             <div className="dropdown-menu">
-              <div>
-                <button>Auto Repair</button>
-                <button>Auto Detailing</button>
-                <button>Car Wash</button>
-                <button>Towing</button>
-              </div>
+              <ul>
+                <li>Auto Repair</li>
+                <li>Auto Detailing</li>
+                <li>Car Wash</li>
+                <li>Towing</li>
+              </ul>
               <div>
                 <button>Oil Change</button>
                 <button>Car Dealer</button>
@@ -35,10 +35,10 @@ export default function Navbar(){
             </div>
           </div>
           <div className="dropdown">
-            <button>
+            <a className='flex text-[#081E40] cursor-pointer '>
               Home Services
               <img src={chevron}  alt="chevron" />
-            </button>
+            </a>
             <div className="dropdown-menu">
               <div>
                 <button>Contractors</button>
@@ -55,10 +55,10 @@ export default function Navbar(){
             </div>
           </div>
           <div className="dropdown">
-            <button>
+            <a className='flex text-[#081E40] cursor-pointer '>
               Reba For Business
               <img src={chevron}  alt="chevron" />
-            </button>
+            </a>
             <div class="dropdown-menu">
               <div>
                 <button>Add a Business</button>
@@ -69,7 +69,7 @@ export default function Navbar(){
           </div>
         </div>
         <Link to="/login">
-          <button
+          <a className='flex text-[#081E40] cursor-pointer '
             style={{
               width : '50px',
               height: '30px',
@@ -77,10 +77,10 @@ export default function Navbar(){
               alignItems: 'center',
               justifyContent: 'center'
             }}
-          >Log In</button>
+          >Log In</a>
         </Link>
         <Link>
-          <button
+          <a className='flex  cursor-pointer '
             style={{
               width : '70px',
               height: '30px',
@@ -91,7 +91,7 @@ export default function Navbar(){
               alignItems: 'center',
               justifyContent: 'center'
             }}
-          >Sign Up</button>
+          >Sign Up</a>
           <button onClick={toggleMenu} className="burger"> </button>
         </Link>
       </nav>

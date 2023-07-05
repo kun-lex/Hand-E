@@ -1,4 +1,4 @@
-import './star.scss'
+// import './star.scss'
 import React, { useState } from 'react';
 
 const StarRating = () => {

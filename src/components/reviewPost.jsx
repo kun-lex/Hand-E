@@ -25,7 +25,7 @@ const ReviewPost = ( username, review, imageUrl ) => {
               </div>
             </div>
           </div>
-          <StarRating/>
+          {/* <StarRating/> */}
         </div>
     )
 }

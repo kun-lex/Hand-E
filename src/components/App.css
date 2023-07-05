@@ -23,7 +23,7 @@ button {
 }
 
 @media (width >= 500px) {
-  button {
+  a {
     font-size: 16px;
   }
 }
@@ -124,6 +124,9 @@ button > img {
     visibility: visible;
     left: 0;
   }
+  .dropdown-menu {
+    display: none;
+  }
 }
 
 @media (width >= 500px) {
@@ -201,20 +204,6 @@ button > img {
 .dropdown-menu button:hover {
   opacity: 1;
 }
-
-/* .Cate-button{
-  margin-top: 10%;
-}
-.user-butt{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.vl{
-  border-right: 3px solid #DDDDDD;
-  height: 20px;
-} */
 .Log_btn{
   position: relative;
   display: flex;
