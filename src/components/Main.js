@@ -5,6 +5,7 @@ import SelectCategory from './SelectCategory';
 import slide1 from './images/join-us pic.png'
 import slide2 from './images/slide 2.png'
 import slide3 from './images/slide 3.png'
+import ReviewPost from './reviewPost';
 
 
 export default function Main() {
@@ -34,30 +35,18 @@ export default function Main() {
           interval={3000}
         />
       </div>
-      <div className='second-page'>
-        <div className='title-nav'>
+      <div className='bg-[#9d9d9d] '>
+        <div className='flex items-center justify-center'>
           <h2 style={{color:"white"}}>Recent Activity</h2>
         </div>
-        <div className='title-nav'>
-          <div className='nav2'>
+        <div className='flex items-center justify-center'>
+          <div className='flex flex-row justify-between items-center m-0 w-[20%] text-white '>
             <button>Nearby</button>
             <button>Friends</button>
             <button>Following</button>
           </div>
         </div>
-        <div className='review-blocks'>
-          <div className='block-1'>
-            <div className='d-flex'>
-              <a class="navbar-brand" href="/">
-                <img src={profile_pic} alt="Avatar Logo" style={{width:"40px"}} class="rounded-pill"/> 
-              </a>
-              <div>
-                <h6>David A.</h6>
-                <p>Wrote a review</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ReviewPost />
       </div>
     </main>
   )

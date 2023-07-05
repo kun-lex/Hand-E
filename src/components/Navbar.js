@@ -1,29 +1,9 @@
-// import myFunction from './Toggle';
 import chevron from './icons/chevron.svg';
 import './App.css';
 import { Link } from "react-router-dom";
 import NewLogo from './images/Reba logo.png'
-import styled from 'styled-components';
 
-// import { Link } from 'react-router-dom';
 export default function Navbar(){
-  const DropDownMenu = styled.div`
-    position: absolute;
-    top: 50px;
-    left: 0;
-    display: flex;
-    gap: 32px;
-    padding: 6px 24px 20px;
-    margin-bottom: 0;
-    justify-content: flex-start;
-    background: #081E40;
-    opacity: 0;
-    visibility: hidden;
-    translate: 0 24px;
-    transition: 0.3s;
-    borderRadius: 10px;
-  `;
-
   function toggleMenu() {
     document.body.classList.toggle("open");
   };
@@ -39,7 +19,7 @@ export default function Navbar(){
             Auto Services
             <img src={chevron}  alt="chevron"/>
             </button>
-            <DropDownMenu>
+            <div className="dropdown-menu">
               <div>
                 <button>Auto Repair</button>
                 <button>Auto Detailing</button>
@@ -52,7 +32,7 @@ export default function Navbar(){
                 <button>Parking</button>
                 <button>Body Shop</button>
               </div>
-            </DropDownMenu>
+            </div>
           </div>
           <div className="dropdown">
             <button>
