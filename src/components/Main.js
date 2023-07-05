@@ -1,7 +1,6 @@
 import './App.css';
 import profile_pic from './images/profilepic.png';
 import ImageSlider from './imageSlider';
-import SelectCategory from './SelectCategory';
 import slide1 from './images/join-us pic.png'
 import slide2 from './images/slide 2.png'
 import slide3 from './images/slide 3.png'
@@ -15,9 +14,6 @@ export default function Main() {
 
   return(
     <main>
-      <div className=' mt-[40px] '>
-        <SelectCategory/>
-      </div>
       <div className="flex justify-center items-center mt-[30px] ">
         <div className='mr-[50px] '>
           <div class="flex">
