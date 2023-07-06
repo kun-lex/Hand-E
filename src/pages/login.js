@@ -9,18 +9,11 @@ import GoogleIcon from '../components/images/icons8-google-48.png'
 export default function Login(){
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
-            display : flex;
-            flex-wrap : wrap;
-            flex-direction : column;
-            align-items : center;
-            justify-content : center;
-            width : 100%;
+            display : none;
+            
         }
         @media (min-width: 700px ){
             display : flex;
-            align-items : center;
-            justify-content : center;
-            width : 100%;
         }
     `;
     return(
@@ -92,7 +85,7 @@ export default function Login(){
                                 justifyContent: 'center',
                                 marginBottom: '10px'
                             }}
-                        >Continue with Google <img src={GoogleIcon} className=' w-[10px] h-[10px] ' alt='google' /> </button>
+                        > <img src={GoogleIcon} className=' w-[10px] h-[10px] ' alt='google' /> Continue with Google</button>
                         <p className='text-black' >Don't have an Account ?</p>
                         <button
                             style={{
@@ -110,13 +103,17 @@ export default function Login(){
                             }}
                         >Sign Up</button>
                     </div>
-                    <div className='w-[1px] h-[200px] bg-zinc-700'></div>
-                    <img
-                    style={{
+                    <WrapStyle>
+                        <div>
+                        <img
+                        style={{
                         width:'500px',
                         height: "250px"
-                    }}
-                    src={loginimg} alt='log in' />
+                        }}
+                        src={loginimg} alt='log in' />
+                        </div>
+                    </WrapStyle>
+                    
                 </div>
             </div>
             <Footer/>
