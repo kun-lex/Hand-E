@@ -21,12 +21,12 @@ export default function NavbarOne(){
               <img src={chevron}  alt="chevron"/>
               </a>
               <div className="dropdown-menu">
-                <ul>
-                  <li>Auto Repair</li>
-                  <li>Auto Detailing</li>
-                  <li>Car Wash</li>
-                  <li>Towing</li>
-                </ul>
+                <div>
+                  <button>Auto Repair</button>
+                  <button>Auto Detailing</button>
+                  <button>Car Wash</button>
+                  <button>Towing</button>
+                </div>
                 <div>
                   <button>Oil Change</button>
                   <button>Car Dealer</button>

@@ -2,7 +2,7 @@ import '../components/App.css'
 // import Log from '../components/icons/log.svg';
 import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 import Footer from '../components/Footer';
 import GoogleIcon from '../components/images/icons8-google-48.png'
 
@@ -85,7 +85,7 @@ export default function Login(){
                                 justifyContent: 'center',
                                 marginBottom: '10px'
                             }}
-                        > <img src={GoogleIcon} className=' w-[10px] h-[10px] ' alt='google' /> Continue with Google</button>
+                        > <img src={GoogleIcon} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> Continue with Google</button>
                         <p className='text-black' >Don't have an Account ?</p>
                         <button
                             style={{
@@ -108,7 +108,7 @@ export default function Login(){
                         <img
                         style={{
                         width:'500px',
-                        height: "250px"
+                        height: "250px",
                         }}
                         src={loginimg} alt='log in' />
                         </div>

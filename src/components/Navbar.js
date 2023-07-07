@@ -9,10 +9,10 @@ export default function Navbar(){
     document.body.classList.toggle("open");
   };
     return(
-      <div className='flex-col'>
+      <div>
         <nav className="navbar">
           <Link to='/'>
-          <div className="nav-title ml-[10px] object-contain"><img  src={NewLogo} alt="logo" /></div>
+          <div className="nav-title ml-[10px] w-full "><img className='object-contain' src={NewLogo} alt="logo" /></div>
           </Link>
             
           <div className="dropdowns">
@@ -22,12 +22,12 @@ export default function Navbar(){
               <img src={chevron}  alt="chevron"/>
               </a>
               <div className="dropdown-menu">
-                <ul>
-                  <li>Auto Repair</li>
-                  <li>Auto Detailing</li>
-                  <li>Car Wash</li>
-                  <li>Towing</li>
-                </ul>
+                <div>
+                  <button>Auto Repair</button>
+                  <button>Auto Detailing</button>
+                  <button>Car Wash</button>
+                  <button>Towing</button>
+                </div>
                 <div>
                   <button>Oil Change</button>
                   <button>Car Dealer</button>
@@ -97,7 +97,7 @@ export default function Navbar(){
           </Link>
           <button onClick={toggleMenu} className="burger"> </button>
         </nav>
-        <div className=' mt-[40px] '>
+        <div className=' w-11/12 sm:w-[60%] mx-auto mt-[40px]  '>
           <SelectCategory/>
         </div>
       </div>

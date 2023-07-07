@@ -27,6 +27,7 @@ export default function Main() {
           </div>
         </div>
         <ImageSlider 
+          className='object-contain'
           images={images} 
           interval={3000}
         />
