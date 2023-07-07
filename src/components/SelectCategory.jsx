@@ -26,7 +26,7 @@ const SelectCategory = () => {
                 components={{
                     DropdownIndicator:() => null, IndicatorSeparator:() => null
                 }}
-                className='w-full '
+                className='w-full rounded-full '
             />
         
             <Select 
@@ -34,11 +34,11 @@ const SelectCategory = () => {
                 components={{
                     DropdownIndicator:() => null, IndicatorSeparator:() => null
                 }}
-                className="text-black w-full rounded-[5px]"
+                className="text-black w-full rounded-l-lg"
                 placeholder="Location"
             />
 
-            <button className=' flex bg-[#081E40] rounded-[5px] w-9 h-9 items-center justify-center'><img src={search}  alt="search" /></button>
+            <button className=' flex bg-[#081E40] rounded-r-lg w-20 h-9 items-center justify-center'><img src={search}  alt="search" /></button>
         </WrapStyle>
     )
 }

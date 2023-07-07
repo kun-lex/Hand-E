@@ -5,6 +5,7 @@ import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
 import Footer from '../components/Footer';
 import GoogleIcon from '../components/images/icons8-google-48.png'
+import { Link } from 'react-router-dom';
 
 export default function Login(){
     const WrapStyle = styled.div`
@@ -87,21 +88,23 @@ export default function Login(){
                             }}
                         > <img src={GoogleIcon} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> Continue with Google</button>
                         <p className='text-black' >Don't have an Account ?</p>
-                        <button
-                            style={{
-                                display : 'flex',
-                                width : '70px',
-                                height : '25px',
-                                borderRadius : '5px',
-                                background :'#1352B0',
-                                color : 'white',
-                                alignItems : 'center',
-                                justifyContent : 'center',
-                                textAlign : 'center',
-                                fontFamily : 'Forum',
-                                marginBottom: '20px'
-                            }}
-                        >Sign Up</button>
+                        <Link to="/sign-up">
+                            <button
+                                style={{
+                                    display : 'flex',
+                                    width : '70px',
+                                    height : '25px',
+                                    borderRadius : '5px',
+                                    background :'#1352B0',
+                                    color : 'white',
+                                    alignItems : 'center',
+                                    justifyContent : 'center',
+                                    textAlign : 'center',
+                                    fontFamily : 'Forum',
+                                    marginBottom: '20px'
+                                }}
+                            >Sign Up</button>
+                        </Link>
                     </div>
                     <WrapStyle>
                         <div>

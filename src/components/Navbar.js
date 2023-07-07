@@ -3,13 +3,20 @@ import './App.css';
 import { Link } from "react-router-dom";
 import NewLogo from './images/Reba logo.png'
 import SelectCategory from './SelectCategory';
+import  styled  from 'styled-components';
 
 export default function Navbar(){
   function toggleMenu() {
     document.body.classList.toggle("open");
   };
+  const NavStyle = styled.div`
+        @media (max-width : 700px) {
+            background : #081E40;
+        }
+        
+    `;
     return(
-      <div>
+      <NavStyle>
         <nav className="navbar">
           <Link to='/'>
           <div className="nav-title ml-[10px] w-full "><img className='object-contain' src={NewLogo} alt="logo" /></div>
@@ -81,7 +88,7 @@ export default function Navbar(){
               }}
             >Log In</a>
           </Link>
-          <Link>
+          <Link to="/sign-up">
             <a className='flex items-center cursor-pointer mr-[10px] '
               style={{
                 width : '70px',
@@ -97,9 +104,9 @@ export default function Navbar(){
           </Link>
           <button onClick={toggleMenu} className="burger"> </button>
         </nav>
-        <div className=' w-11/12 sm:w-[60%] mx-auto mt-[40px]  '>
+        <div className=' w-11/12 sm:w-[60%] mx-auto mt-[20px]  '>
           <SelectCategory/>
         </div>
-      </div>
+      </NavStyle>
     )
 }
