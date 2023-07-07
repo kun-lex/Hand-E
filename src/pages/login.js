@@ -3,7 +3,6 @@ import '../components/App.css'
 import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
-import Footer from '../components/Footer';
 import GoogleIcon from '../components/images/icons8-google-48.png'
 import { Link } from 'react-router-dom';
 
@@ -37,7 +36,7 @@ export default function Login(){
                                 background : '#fffff',
                                 borderRadius : '20px',
                                 width : '250px',
-                                height : '50px',
+                                height : '40px',
                                 padding: '10px',
                                 marginBottom: '20px'
                             }}
@@ -49,7 +48,7 @@ export default function Login(){
                                 background : '#fffff',
                                 borderRadius : '20px',
                                 width : '250px',
-                                height : '50px',
+                                height : '40px',
                                 padding: '10px',
                                 marginBottom: '20px'
                             }}
@@ -76,7 +75,7 @@ export default function Login(){
                         </div>
                         <button
                             style={{
-                                width: '200px',
+                                width: '300px',
                                 height: '40px',
                                 borderRadius: '32px',
                                 background: 'black',
@@ -119,7 +118,6 @@ export default function Login(){
                     
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }
