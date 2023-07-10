@@ -1,5 +1,5 @@
 import '../components/App.css'
-// import Log from '../components/icons/log.svg';
+import NewLogo from './images/Reba logo.png'
 import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
@@ -18,7 +18,7 @@ export default function Login(){
     `;
     return(
         <div>
-            <NavbarOne />
+            <img src={NewLogo} alt='reba logo' />
             <div className='flex items-center justify-center w-full mt-[50px]'>
                 <div className='flex'>
                     <div className='flex flex-col items-center'>
