@@ -65,8 +65,8 @@ h2 {
   right: 0;
   display: grid;
   place-items: center;
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 24px;
   background-image: url("../components/icons/menu.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -127,6 +127,9 @@ button > img {
   }
   .dropdown-menu {
     display: none;
+  }
+  .work-text {
+    font-size : 16px;
   }
 }
 

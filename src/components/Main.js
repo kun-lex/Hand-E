@@ -5,6 +5,7 @@ import slide1 from './images/join-us pic.png'
 import slide2 from './images/slide 2.png'
 import slide3 from './images/slide 3.png'
 import ReviewPost from './reviewPost';
+import styled  from 'styled-components';
 
 
 export default function Main() {
@@ -16,20 +17,18 @@ export default function Main() {
     <main>
       <div className="flex justify-center items-center mt-[30px] ">
         <div className='mr-[50px] '>
-          <div class="flex">
-            <div>
-              <h1 className='work-text'>Work with us</h1>
-              <h2 className='text-black'>Get More From Your <br/> 
-                Profession
-              </h2>
-              <button className=' w-[130px] h-[35px] bg-[#081E40] rounded-[15px] items-center justify-center text-white '>Learn More</button>
-            </div>
+          <div>
+            <h1 className='work-text' >Work with us</h1>
+            <h2 className='text-black'>Get More From Your <br/> 
+              Profession
+            </h2>
+            <button className=' w-[130px] h-[35px] bg-[#081E40] rounded-[15px] items-center justify-center text-white '>Learn More</button>
           </div>
         </div>
         <ImageSlider 
           className='object-contain'
           images={images} 
-          interval={3000}
+          interval={4000}
         />
       </div>
       <div className='bg-[#9d9d9d] '>

@@ -1,5 +1,5 @@
 import '../components/App.css'
-import NewLogo from './images/Reba logo.png'
+import NewLogo from '../components/images/Reba logo.png'
 import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';

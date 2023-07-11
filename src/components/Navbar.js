@@ -24,7 +24,7 @@ export default function Navbar(){
             
           <div className="dropdowns">
             <div className="dropdown">
-              <a className='flex items-center text-[#081E40] cursor-pointer mr-[10px] ' >
+              <a className='flex items-center text-[#081E40] text-[15px] cursor-pointer mr-[10px] ' >
               Auto Services
               <img src={chevron}  alt="chevron"/>
               </a>
@@ -44,7 +44,7 @@ export default function Navbar(){
               </div>
             </div>
             <div className="dropdown">
-              <a className='flex text-[#081E40] cursor-pointer mr-[10px] '>
+              <a className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
                 Home Services
                 <img src={chevron}  alt="chevron" />
               </a>
@@ -64,7 +64,7 @@ export default function Navbar(){
               </div>
             </div>
             <div className="dropdown">
-              <a className='flex text-[#081E40] cursor-pointer mr-[10px] '>
+              <a className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
                 Reba For Business
                 <img src={chevron}  alt="chevron" />
               </a>
@@ -78,7 +78,7 @@ export default function Navbar(){
             </div>
           </div>
           <Link to="/login">
-            <a className='flex text-[#081E40] cursor-pointer '
+            <a className='flex text-[#081E40] text-[12px] cursor-pointer '
               style={{
                 width : '50px',
                 height: '30px',
@@ -89,11 +89,10 @@ export default function Navbar(){
             >Log In</a>
           </Link>
           <Link to="/sign-up">
-            <a className='flex items-center cursor-pointer mr-[10px] '
+            <a className='flex items-center text-[12px] cursor-pointer mr-[10px] '
               style={{
                 width : '70px',
                 height: '30px',
-                border:'1px solid #fff',
                 background:'#1D5EBF',
                 color:'white',
                 borderRadius:'19.5px',
