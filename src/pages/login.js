@@ -5,8 +5,25 @@ import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
 import GoogleIcon from '../components/images/icons8-google-48.png'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { auth } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function Login(){
+    const [email, setEmail] = useState([]);
+    const [password, setPassword] = useState([]);
+
+    const signIn = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            console.log(userCredential)
+        }).catch((error) => {
+            console.log(error)
+        }
+        
+        )
+    }
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
             display : none;
@@ -21,7 +38,10 @@ export default function Login(){
             <img src={NewLogo} alt='reba logo' />
             <div className='flex items-center justify-center w-full mt-[50px]'>
                 <div className='flex'>
-                    <div className='flex flex-col items-center'>
+                    <form 
+                        className='flex flex-col items-center'
+                        onSubmit={signIn}
+                    >
                         <h1 style={{
                             color:"#081E40",
                             fontFamily : 'Sanchez',
@@ -42,6 +62,8 @@ export default function Login(){
                             }}
                             type="text"
                             placeholder='Username or Email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <input
                             style={{
@@ -54,6 +76,8 @@ export default function Login(){
                             }}
                             type="password"
                             placeholder='Password'
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                         <button
                             style={{
@@ -68,6 +92,7 @@ export default function Login(){
                                 textAlign : 'center',
                                 fontFamily : 'Forum',
                             }}
+                            type='submit'
                         >Sign In</button>
                         <a className='cursor-pointer' >Forgot Password ?</a>
                         <div className='flex items-center '>
@@ -104,7 +129,7 @@ export default function Login(){
                                 }}
                             >Sign Up</button>
                         </Link>
-                    </div>
+                    </form>
                     <WrapStyle>
                         <div>
                         <img
