@@ -6,12 +6,22 @@ import slide2 from './images/slide 2.png'
 import slide3 from './images/slide 3.png'
 import ReviewPost from './reviewPost';
 import styled  from 'styled-components';
+import { useEffect, useState } from 'react';
+import { db } from '../firebase';
+import { onSnapshot, collection } from 'firebase/firestore';
 
 
 export default function Main() {
+  const [ reviews, setReviews ] = useState([]);
   const images = [
     slide1, slide2, slide3,
   ];
+
+  useEffect(()=> 
+    onSnapshot(collection(db, "posts"), (snapshot) => 
+      setReviews(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    )
+  , [])
 
   return(
     <main>
@@ -42,7 +52,14 @@ export default function Main() {
             <button>Following</button>
           </div>
         </div>
-        <ReviewPost />
+        <div className='flex items-center justify-center'>
+        {
+          reviews.map((review) => (
+            <ReviewPost key={review.id} username={review.username} imageUrl={review.imageUrl} />
+          ))
+        }
+        </div>
+        
       </div>
     </main>
   )

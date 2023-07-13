@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import Footer from '../components/Footer';
-import NavbarOne from '../components/navbarOne';
 import SignUpImage from '../components/icons/undraw_sign_up_n6im.svg'
 import GoogleIcon from '../components/images/icons8-google-48.png'
 import { Link } from "react-router-dom";
+import NewLogo from '../components/images/Reba logo.png'
 
 const SignUp = () => {
     const WrapStyle = styled.div`
@@ -13,6 +12,8 @@ const SignUp = () => {
     }
     `;
     return (
+        <div>
+            <img src={NewLogo} alt='reba logo' />
             <div className='flex justify-center origin-[-50%_-50%] mt-[100px]'>
                 <div className='flex flex-col items-center'>
                     <h1 style={{
@@ -96,6 +97,7 @@ const SignUp = () => {
                     </div>
                 </WrapStyle>
             </div>
+        </div>
     )
 }
 export default SignUp;
