@@ -9,6 +9,7 @@ import styled  from 'styled-components';
 import { useEffect, useState } from 'react';
 import { db } from '../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
+import groupdesign from './icons/gruopdesign.png';
 
 
 export default function Main() {
@@ -59,7 +60,9 @@ export default function Main() {
           ))
         }
         </div>
-        
+      </div>
+      <div>
+        <img src={groupdesign} alt='group-design' className='' />
       </div>
     </main>
   )

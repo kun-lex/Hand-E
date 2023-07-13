@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import NewLogo from './images/Reba logo.png'
 import SelectCategory from './SelectCategory';
 import  styled  from 'styled-components';
+import carDetail from './icons/cardetailinglogo.svg';
+import carRepair from './icons/carrepairlogo.svg';
+import carWash from './icons/carwashlogo.svg';
 
 export default function Navbar(){
   function toggleMenu() {
@@ -30,13 +33,13 @@ export default function Navbar(){
               </a>
               <div className="dropdown-menu">
                 <div>
-                  <button>Auto Repair</button>
-                  <button>Auto Detailing</button>
-                  <button>Car Wash</button>
+                  <button><img src={carRepair} className='h-[20px] w-[20px] ' alt='car wash'/>Auto Repair</button>
+                  <button><img className='h-[20px] w-[20px] ' src={carDetail} alt='car wash'/>Auto Detailing</button>
+                  <button><img className='h-[20px] w-[20px] ' src={carWash} alt='car wash'/>Car Wash</button>
                   <button>Towing</button>
                 </div>
                 <div>
-                  <button>Oil Change</button>
+                  <button><img src={carRepair} className='h-[20px] w-[20px] flex ' alt='car wash'/>Oil Change</button>
                   <button>Car Dealer</button>
                   <button>Parking</button>
                   <button>Body Shop</button>
