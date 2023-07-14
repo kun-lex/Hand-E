@@ -3,22 +3,22 @@ import Select from 'react-select';
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { db } from '../firebase';
-import { collection } from 'firebase/firestore';
+import { getDocs, collection } from 'firebase/firestore';
 
 
 const SelectCategory = () => {
     const [ data, setData ] = useState([]);
-    const [ selectedOption, setSelectedOption] = useState(null);
+    const [ selectedOption, setSelectedOption] = useState([null]);
     
 
     useEffect(() => {
         const fetchData = async () => {
         const collectionRef = collection(db, "categories")
         try {
-        const snapshot = await collectionRef.get();
+        const snapshot = await getDocs(collectionRef);
         const fecthedData = snapshot.docs.map((doc) => ({
             value: doc.id,
-            label: doc.data().foods.Gyms.Restaurants,
+            label: doc.data().Gyms,
         }));
         setData(fecthedData);
     }catch (error) {
@@ -31,7 +31,6 @@ const SelectCategory = () => {
     const handleChange = (selected) => {
         setSelectedOption(selected);
     };
-
 
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
