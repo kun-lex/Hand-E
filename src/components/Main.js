@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react';
 import { db } from '../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
 import groupdesign from './icons/gruopdesign.png';
+import groupdesigntwo from './icons/groupdesigntwo.png'
+import carRepair from './icons/carrepairlogo.svg';
 
 
 export default function Main() {
@@ -62,7 +64,21 @@ export default function Main() {
         </div>
       </div>
       <div>
-        <img src={groupdesign} alt='group-design' className='' />
+        <div
+          className=' flex items-center w-full  '
+        >
+          <div style={{ position: 'relative', display: 'flex' , alignItems: 'flex-start', justifyContent: 'start'}}>
+            <img src={groupdesign} alt='group-design' className='w-[200px] h-[200px] ' />
+          </div>
+          <h5 className='justify-center ml-[30%]'>Quick Fix?</h5>
+        </div>
+        {/* categories and svgs */}
+        <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' ><img src={carRepair} alt='auto' /> </div>
+        <div
+          style={{ position: 'relative', display: 'flex' , alignItems: 'flex-end', justifyContent: 'end'}}
+        >
+        <img src={groupdesigntwo} alt='group-design' className='w-[200px] h-[200px]'/>
+        </div>
       </div>
     </main>
   )

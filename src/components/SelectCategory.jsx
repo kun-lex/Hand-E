@@ -1,9 +1,24 @@
 import search from './icons/search.svg';
 import Select from 'react-select';
 import styled from 'styled-components';
+import { useEffect, useMemo, useState } from 'react';
+import { db } from '../firebase';
+import { onSnapshot, collection } from 'firebase/firestore';
 
 
 const SelectCategory = () => {
+    const [ val, setVal ] = useState([]);
+    // const handleCategoryChoice = (selected) => {
+       
+    // }
+
+    const options = useMemo(()=> 
+    onSnapshot(collection(db, "categories"), (snapshot) => 
+      setVal(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    )
+  , [])
+
+
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
             display : flex;
@@ -27,6 +42,7 @@ const SelectCategory = () => {
                     DropdownIndicator:() => null, IndicatorSeparator:() => null
                 }}
                 className='w-full rounded-full '
+                options={options}
             />
         
             <Select 
