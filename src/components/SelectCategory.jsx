@@ -1,22 +1,36 @@
 import search from './icons/search.svg';
 import Select from 'react-select';
 import styled from 'styled-components';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { db } from '../firebase';
-import { onSnapshot, collection } from 'firebase/firestore';
+import { collection } from 'firebase/firestore';
 
 
 const SelectCategory = () => {
-    const [ val, setVal ] = useState([]);
-    // const handleCategoryChoice = (selected) => {
-       
-    // }
+    const [ data, setData ] = useState([]);
+    const [ selectedOption, setSelectedOption] = useState(null);
+    
 
-    const options = useMemo(()=> 
-    onSnapshot(collection(db, "categories"), (snapshot) => 
-      setVal(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
-    )
-  , [])
+    useEffect(() => {
+        const fetchData = async () => {
+        const collectionRef = collection(db, "categories")
+        try {
+        const snapshot = await collectionRef.get();
+        const fecthedData = snapshot.docs.map((doc) => ({
+            value: doc.id,
+            label: doc.data().foods.Gyms.Restaurants,
+        }));
+        setData(fecthedData);
+    }catch (error) {
+        console.error('Error fecthing data: ', error);
+    }
+    }
+    fetchData();
+    }, []);
+
+    const handleChange = (selected) => {
+        setSelectedOption(selected);
+    };
 
 
     const WrapStyle = styled.div`
@@ -42,7 +56,9 @@ const SelectCategory = () => {
                     DropdownIndicator:() => null, IndicatorSeparator:() => null
                 }}
                 className='w-full rounded-full '
-                options={options}
+                options={data}
+                value={selectedOption}
+                onChange={handleChange}
             />
         
             <Select 
