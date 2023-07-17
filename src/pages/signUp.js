@@ -73,6 +73,7 @@ const SignUp = () => {
                     <div className='flex items-center '>
                         <h5 className=' p-[5px] ' >or</h5>
                     </div>
+                    <Link to='/sign-up-manually'>
                     <button
                         style={{
                             width: '300px',
@@ -86,6 +87,7 @@ const SignUp = () => {
                             marginBottom: '10px'
                         }}
                     > <img src={GoogleIcon} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> Sign Up Manually </button>
+                    </Link>
                     <p className='text-black' >Have an Account?</p>
                     <Link to="/login">
                         <button

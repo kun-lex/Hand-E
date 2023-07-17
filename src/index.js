@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './pages/login';
 import SignUp from './pages/signUp';
+import SignUpManual from './pages/signUpManual';
 const router = createBrowserRouter([
   {
     path : "/",
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
   {
     path : "/sign-up",
     element : (<SignUp />)
-  }
+  },
+  {
+    path : "/sign-up-manually",
+    element : (<SignUpManual />)
+  },
 
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
