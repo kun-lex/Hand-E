@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './pages/login';
 import SignUp from './pages/signUp';
 import SignUpManual from './pages/signUpManual';
+import UserLanding from './pages/userLandinfpage';
 const router = createBrowserRouter([
   {
     path : "/",
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
     path : "/sign-up-manually",
     element : (<SignUpManual />)
   },
-
+  {
+    path : "/home",
+    element : (<UserLanding />)
+  },
+  
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

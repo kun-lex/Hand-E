@@ -7,10 +7,12 @@ import { useState } from 'react';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import GeoLocation from '../components/geolocation';
+import { useNavigate } from 'react-router-dom'
 
 const SignUpManual = () => {
     const [email, setEmail] = useState([]);
     const [password, setPassword] = useState([]);
+    const navigate = useNavigate();
 
     const signUp = (e) => {
         e.preventDefault();
@@ -22,6 +24,7 @@ const SignUpManual = () => {
         }
         
         )
+        navigate('/home');
     }
 
 
@@ -91,6 +94,7 @@ const SignUpManual = () => {
                                 fontFamily : 'Forum',
                             }}
                             type='submit'
+                            
                         >Sign Up</button>
                         <GeoLocation/>
                     </form>
