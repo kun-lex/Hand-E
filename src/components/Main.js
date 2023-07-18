@@ -12,7 +12,8 @@ import { onSnapshot, collection } from 'firebase/firestore';
 import groupdesign from './icons/gruopdesign.png';
 import groupdesigntwo from './icons/groupdesigntwo.png'
 import carRepair from './icons/carrepairlogo.svg';
-
+import ReviewBtn from './ReviewBtn';
+import ScrollUpBtn from './ScrollUpbtn';
 
 export default function Main() {
   const [ reviews, setReviews ] = useState([]);
@@ -80,6 +81,8 @@ export default function Main() {
         <img src={groupdesigntwo} alt='group-design' className='w-[200px] h-[200px]'/>
         </div>
       </div>
+      <ReviewBtn/>
+      <ScrollUpBtn/>
     </main>
   )
 }
