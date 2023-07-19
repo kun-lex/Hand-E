@@ -28,12 +28,12 @@ const ScrollUpBtn = () => {
                     position: "fixed",
                     bottom: "-1px",
                     right: "50px",
-                    height: "50px",
-                    width: "50px",
+                    height: "40px",
+                    width: "40px",
                     backgroundColor: "#081E40",
                     color: "white",
                     borderRadius: "50px",
-                    fontSize: "40px",
+                    fontSize: "30px",
                     alignItems: "center",
                 }}
                 onClick={scrollUp}

@@ -17,7 +17,7 @@ const SelectCategory = () => {
         try {
         const snapshot = await getDocs(collectionRef);
         const fecthedData = snapshot.docs.map((doc) => ({
-            value: doc.id.each,
+            value: doc.id,
             label: doc.data().Gyms,
         }));
         setData(fecthedData);
