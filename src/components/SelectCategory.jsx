@@ -7,59 +7,34 @@ import { getDocs, collection } from 'firebase/firestore';
 import { Categories as cate  } from '../data/categories';
 
 
+
+
 const SelectCategory = () => {
-    const [ data, setData ] = useState({
-        categoryVal: "",
-        selectedCategory: "",
-        categoryLabel: "selected",
-    });
-
-    const handleCategoryChoice = (selected) => {
-        const { value, label } = selected;
-        setData((prevState) => ({
-            ...prevState,
-            categoryVal: value,
-            selectedCategory: value,
-            categoryLabel: label,
-        })
-        );
-    };
-
-    const option = useMemo (
-        () =>
-        cate.map(({id, cate}) => {
-            const cateLabel = {};
-            cateLabel.value = id;
-            cateLabel.label = cate;
-
-            return cateLabel
-        }),
-        []
-    );
-    // const [ data, setData ] = useState([]);
-    // const [ selectedOption, setSelectedOption] = useState([null]);
+   
+    const [ data, setData ] = useState({});
+    const [ selectedOption, setSelectedOption] = useState([null]);
     
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //     const collectionRef = collection(db, "categories")
-    //     try {
-    //     const snapshot = await getDocs(collectionRef);
-    //     const fecthedData = snapshot.docs.map((doc) => ({
-    //         value: doc.id,
-    //         label: doc.data().Gyms,
-    //     }));
-    //     setData(fecthedData);
-    // }catch (error) {
-    //     console.error('Error fecthing data: ', error);
-    // }
-    // }
-    // fetchData();
-    // }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+        const collectionRef = collection(db, "categories")
+        try {
+        const snapshot = await getDocs(collectionRef);
+        const fecthedData = snapshot.docs.map((doc) => ({
+            value: doc.id,
+            label: doc.data().name,
+        }));
+        setData(fecthedData);
+    }catch (error) {
+        console.error('Error fecthing data: ', error);
+    }
+    }
+    fetchData();
+    }, []);
 
-    // const handleChange = (selected) => {
-    //     setSelectedOption(selected);
-    // };
+    const handleChange = (selected) => {
+        setSelectedOption(selected);
+    };
 
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
@@ -76,23 +51,8 @@ const SelectCategory = () => {
         }
     `;
     return(
-        <WrapStyle>
+        <WrapStyle>            
             <Select
-                placeholder='Search anything...'
-                components={{
-                    DropdownIndicator:() => null, IndicatorSeparator:() => null
-                }}
-                className='w-full rounded-full '
-                value={{
-                    value: data.categoryVal,
-                    label: data.categoryLabel,
-                }}
-                onChange={handleCategoryChoice}
-                options={option}
-                
-            />
-            
-            {/* <Select
                 placeholder='Search anything...'
                 components={{
                     DropdownIndicator:() => null, IndicatorSeparator:() => null
@@ -101,7 +61,7 @@ const SelectCategory = () => {
                 options={data}
                 value={selectedOption}
                 onChange={handleChange}
-            /> */}
+            />
         
             <Select 
                 type="text"
