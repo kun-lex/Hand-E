@@ -22,7 +22,7 @@ const SelectCategory = () => {
         const snapshot = await getDocs(collectionRef);
         const fecthedData = snapshot.docs.map((doc) => ({
             value: doc.id,
-            label: doc.data().name,
+            label: doc.data().Gyms,
         }));
         setData(fecthedData);
     }catch (error) {
@@ -35,6 +35,11 @@ const SelectCategory = () => {
     const handleChange = (selected) => {
         setSelectedOption(selected);
     };
+    const options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' }
+      ]
 
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
@@ -58,7 +63,7 @@ const SelectCategory = () => {
                     DropdownIndicator:() => null, IndicatorSeparator:() => null
                 }}
                 className='w-full rounded-full '
-                options={data}
+                options={options}
                 value={selectedOption}
                 onChange={handleChange}
             />

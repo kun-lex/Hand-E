@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { db } from '../firebase';
+import { db, database, dref } from '../firebase';
 import { collection } from 'firebase/firestore';
 import 'firebase/database';
 
@@ -13,9 +13,9 @@ const LiveSearchBar = () => {
 
   const fetchSearchResults = (query) => {
     
-    const ref = collection(db, "categories"); 
+    const mref = database.dref('categories'); 
 
-    ref
+    mref
       .orderByChild('name') 
       .startAt(query)
       .endAt(query + '\uf8ff') 

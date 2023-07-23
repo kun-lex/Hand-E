@@ -14,7 +14,7 @@ import groupdesigntwo from './icons/groupdesigntwo.png'
 import carRepair from './icons/carrepairlogo.svg';
 import ReviewBtn from './ReviewBtn';
 import ScrollUpBtn from './ScrollUpbtn';
-import LiveSearchBar from './demoSearch';
+// import LiveSearchBar from './demoSearch';
 
 export default function Main() {
   const [ reviews, setReviews ] = useState([]);
@@ -30,7 +30,7 @@ export default function Main() {
 
   return(
     <main>
-      <LiveSearchBar/>
+      {/* <LiveSearchBar/> */}
       <div className="flex justify-center items-center mt-[30px] ">
         <div className='mr-[50px] '>
           <div>
