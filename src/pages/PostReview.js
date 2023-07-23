@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { db, storage } from '../firebase';
-import { ref } from 'firebase/storage';
+import  ref  from 'firebase/storage';
 
 const PostReview = () => {
   const [caption, setCaption] = useState('');
@@ -19,7 +19,7 @@ const PostReview = () => {
 
     try {
       // Upload the image to Firebase Storage
-      const storageRef = storage.ref();
+      const storageRef = storage.ref(); 
       const imageRef = storageRef.child(image.name);
       await imageRef.put(image);
 
@@ -27,7 +27,7 @@ const PostReview = () => {
       const imageUrl = await imageRef.getDownloadURL();
 
       // Save the data (caption and image URL) to Firebase Firestore
-      await db.collection('images').add({
+      await db.collection('posts').add({
         caption,
         imageUrl,
       });
