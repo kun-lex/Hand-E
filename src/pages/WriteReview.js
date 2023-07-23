@@ -1,9 +1,10 @@
-import SelectCategory from './SelectCategory';
-import  ReviewLogo from './icons/undraw_for_review_eqxk.svg';
-import NavbarOne from './navbarOne';
-import StarRating from './starrate';
+import SelectCategory from '../components/SelectCategory';
+import  ReviewLogo from '../components/icons/undraw_for_review_eqxk.svg';
+import NavbarOne from '../components/navbarOne';
+import StarRating from '../components/starrate';
 import { useState } from 'react';
-import Footer from './Footer';
+import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 const WriteReview = () => {
     const [rating, setRating] = useState(0);
@@ -51,6 +52,9 @@ const WriteReview = () => {
                     </div>
                 </div>
             </div>
+            <Link to='/post-review'>
+                <button>Post Review</button>
+            </Link>
             <Footer/>
         </div>
     )

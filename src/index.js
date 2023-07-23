@@ -8,7 +8,8 @@ import Login from './pages/login';
 import SignUp from './pages/signUp';
 import SignUpManual from './pages/signUpManual';
 import UserLanding from './pages/userLandinfpage';
-import WriteReview from './components/WriteReview';
+import WriteReview from './pages/WriteReview';
+import PostReview from './pages/PostReview';
 const router = createBrowserRouter([
   {
     path : "/",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path : "/write-review",
     element : (<WriteReview />)
+  },
+  {
+    path : "/post-review",
+    element : (<PostReview />)
   },
   
 ])
