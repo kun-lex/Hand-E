@@ -76,7 +76,40 @@ export default function Main() {
           <h5 className='justify-center ml-[30%]'>Quick Fix?</h5>
         </div>
         {/* categories and svgs */}
-        <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' ><img src={carRepair} alt='auto' /> </div>
+        <div className='flex justify-center justify-evenly mb-[20px] m-[50px] ' >
+
+          <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <h3>Auto Services</h3>
+            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
+          </div>
+
+          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <img src={carRepair} alt='auto' /> 
+          </div>
+
+          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <img src={carRepair} alt='auto' /> 
+          </div>
+
+        </div>
+
+        <div className='flex justify-center justify-evenly m-[50px] ' >
+
+          <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <h3>Auto Services</h3>
+            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
+          </div>
+
+          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <img src={carRepair} alt='auto' /> 
+          </div>
+
+          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <img src={carRepair} alt='auto' /> 
+          </div>
+
+        </div>
+        
         <div
           style={{ position: 'relative', display: 'flex' , alignItems: 'flex-end', justifyContent: 'end'}}
         >
