@@ -25,8 +25,134 @@ const WriteReview = () => {
                 </div>
                 <img style={{ width: "150px", height: "150px", justifyContent: "flex-end", display: "flex", marginRight: "auto" }} src={ReviewLogo} alt='review logo' /> 
             </div>
-            <div>
-                <h3><strong>Visted one of these places recently?</strong></h3>
+
+            <h3 className='ml-[90px] mb-[20px]'><strong>Visted one of these places recently?</strong></h3>
+
+            <div className='flex justify-evenly items-center mb-[20px] ' >
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        height: " 150px ",
+                        width: " 400px ",
+                        border: "1px solid gray",
+                    }}
+                >
+                    <img src='https://grandbaby-cakes.com/wp-content/uploads/2023/04/jollof-rice-recipe-23.jpg' alt='food' className='w-[150px] h-[150px] ' />
+                    <div className='p-5' >
+                        <h3><strong>Jollof Hut</strong></h3>
+                        <p className="text-black text-[13px] ">
+                            Do you recommand this business?
+                        </p>
+                        <div className="container">
+                            <StarRating
+                                totalStars={5}
+                                initialRating={rating}
+                                onRatingChange={handleRatingChange}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        height: " 150px ",
+                        width: " 400px ",
+                        border: "1px solid gray",
+                    }}
+                >
+                    <img src='https://grandbaby-cakes.com/wp-content/uploads/2023/04/jollof-rice-recipe-23.jpg' alt='food' className='w-[150px] h-[150px] ' />
+                    <div className='p-5' >
+                        <h3><strong>Jollof Hut</strong></h3>
+                        <p className="text-black text-[13px] ">
+                            Do you recommand this business?
+                        </p>
+                        <div className="container">
+                            <StarRating
+                                totalStars={5}
+                                initialRating={rating}
+                                onRatingChange={handleRatingChange}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='flex justify-evenly items-center mb-[20px] ' >
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        height: " 150px ",
+                        width: " 400px ",
+                        border: "1px solid gray",
+                    }}
+                >
+                    <img src='https://grandbaby-cakes.com/wp-content/uploads/2023/04/jollof-rice-recipe-23.jpg' alt='food' className='w-[150px] h-[150px] ' />
+                    <div className='p-5' >
+                        <h3><strong>Jollof Hut</strong></h3>
+                        <p className="text-black text-[13px] ">
+                            Do you recommand this business?
+                        </p>
+                        <div className="container">
+                            <StarRating
+                                totalStars={5}
+                                initialRating={rating}
+                                onRatingChange={handleRatingChange}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        height: " 150px ",
+                        width: " 400px ",
+                        border: "1px solid gray",
+                    }}
+                >
+                    <img src='https://grandbaby-cakes.com/wp-content/uploads/2023/04/jollof-rice-recipe-23.jpg' alt='food' className='w-[150px] h-[150px] ' />
+                    <div className='p-5' >
+                        <h3><strong>Jollof Hut</strong></h3>
+                        <p className="text-black text-[13px] ">
+                            Do you recommand this business?
+                        </p>
+                        <div className="container">
+                            <StarRating
+                                totalStars={5}
+                                initialRating={rating}
+                                onRatingChange={handleRatingChange}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='flex justify-evenly items-center mb-[20px] ' >
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        height: " 150px ",
+                        width: " 400px ",
+                        border: "1px solid gray",
+                    }}
+                >
+                    <img src='https://grandbaby-cakes.com/wp-content/uploads/2023/04/jollof-rice-recipe-23.jpg' alt='food' className='w-[150px] h-[150px] ' />
+                    <div className='p-5' >
+                        <h3><strong>Jollof Hut</strong></h3>
+                        <p className="text-black text-[13px] ">
+                            Do you recommand this business?
+                        </p>
+                        <div className="container">
+                            <StarRating
+                                totalStars={5}
+                                initialRating={rating}
+                                onRatingChange={handleRatingChange}
+                            />
+                        </div>
+                    </div>
+                </div>
                 <div
                     style={{
                         display: "flex",
