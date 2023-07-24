@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { db, storage } from '../firebase';
-import  ref  from 'firebase/storage';
+import  {ref}  from 'firebase/storage';
+import NavbarOne from '../components/navbarOne';
+import SelectCategory from '../components/SelectCategory';
 
 const PostReview = () => {
   const [caption, setCaption] = useState('');
@@ -41,29 +43,33 @@ const PostReview = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="caption">Caption:</label>
-        <input
-          type="text"
-          id="caption"
-          value={caption}
-          onChange={handleCaptionChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="image">Image:</label>
-        <input
-          type="file"
-          accept="image/*"
-          id="image"
-          onChange={handleImageChange}
-          required
-        />
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <NavbarOne/>
+      <SelectCategory/>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="caption">Caption:</label>
+          <input
+            type="text"
+            id="caption"
+            value={caption}
+            onChange={handleCaptionChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="image">Image:</label>
+          <input
+            type="file"
+            accept="image/*"
+            id="image"
+            onChange={handleImageChange}
+            required
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 };
 
