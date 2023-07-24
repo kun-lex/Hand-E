@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import { db, storage } from '../firebase';
 import  {ref}  from 'firebase/storage';
 import NavbarOne from '../components/navbarOne';
-import SelectCategory from '../components/SelectCategory';
 
 const PostReview = () => {
+  const [title, setTitle] = useState('');
   const [caption, setCaption] = useState('');
   const [image, setImage] = useState(null);
+
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+  };
 
   const handleCaptionChange = (e) => {
     setCaption(e.target.value);
@@ -21,7 +25,7 @@ const PostReview = () => {
 
     try {
       // Upload the image to Firebase Storage
-      const storageRef = storage.ref(); 
+      const storageRef = ref(storage); 
       const imageRef = storageRef.child(image.name);
       await imageRef.put(image);
 
@@ -45,10 +49,19 @@ const PostReview = () => {
   return (
     <div>
       <NavbarOne/>
-      <SelectCategory/>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="caption">Caption:</label>
+          <label htmlFor="caption">Business Name:</label>
+          <input
+            type="text"
+            id="caption"
+            value={title}
+            onChange={handleTitleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="caption">Review:</label>
           <input
             type="text"
             id="caption"
