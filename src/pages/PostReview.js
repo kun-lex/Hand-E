@@ -49,7 +49,7 @@ const PostReview = () => {
   return (
     <div>
       <NavbarOne/>
-      <form onSubmit={handleSubmit}>
+      <form className='flex flex-col justify-start items-center mt-[50px] ' onSubmit={handleSubmit}>
         <div>
           <label htmlFor="caption">Business Name:</label>
           <input
@@ -58,9 +58,16 @@ const PostReview = () => {
             value={title}
             onChange={handleTitleChange}
             required
+            style={{
+              width: '200px',
+              height: '30px',
+              border: '1px solid lightgray',
+              backgroundColor: 'white',
+              borderRadius: '5px'
+            }}
           />
         </div>
-        <div>
+        <div className='flex'>
           <label htmlFor="caption">Review:</label>
           <input
             type="text"
@@ -68,6 +75,13 @@ const PostReview = () => {
             value={caption}
             onChange={handleCaptionChange}
             required
+            style={{
+              width: '500px',
+              height: '250px',
+              border: '1px solid lightgray',
+              backgroundColor: 'white',
+              borderRadius: '5px'
+            }}
           />
         </div>
         <div>

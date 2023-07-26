@@ -1,11 +1,10 @@
 import search from './icons/search.svg';
 import Select from 'react-select';
 import styled from 'styled-components';
-import { useEffect, useMemo, useState } from 'react';
-import { db } from '../firebase';
-import { getDocs, collection } from 'firebase/firestore';
-import { Categories as cate  } from '../data/categories';
-
+import { useEffect, useState } from 'react';
+import { db, database } from '../firebase';
+import { ref, startAt, endAt } from 'firebase/database';
+import { getDocs, collection, orderBy } from 'firebase/firestore';
 
 
 
@@ -13,8 +12,33 @@ const SelectCategory = () => {
    
     const [ data, setData ] = useState({});
     const [ selectedOption, setSelectedOption] = useState([null]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
     
+    const handleSearch = (e) => {
+        const { value } = e.target;
+        setSearchTerm(value);
 
+        // Perform the search query on Firebase Realtime Database
+        
+        ref(database, 'name') // Replace 'items' with the key of your Firebase database node where the data is stored
+        .orderBy('items') // Replace 'name' with the key of the property you want to search
+        .startAt(value)
+        .endAt(value + '\uf8ff') // This is for a case-insensitive search
+        .once('value')
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+            const data = snapshot.val();
+            const results = Object.values(data);
+            setSearchResults(results);
+            } else {
+            setSearchResults([]);
+            }
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
+    };
     useEffect(() => {
         const fetchData = async () => {
         const collectionRef = collection(db, "categories")
@@ -56,7 +80,21 @@ const SelectCategory = () => {
         }
     `;
     return(
-        <WrapStyle>            
+        <WrapStyle>
+             <div>
+                <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    placeholder="Search..."
+                />
+                <ul>
+                    {searchResults.map((item) => (
+                    <li key={item.id}>{item.name}</li>
+                    ))}
+                </ul>
+            </div>
+                    
             <Select
                 placeholder='Search anything...'
                 components={{
