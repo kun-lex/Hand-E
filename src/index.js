@@ -10,6 +10,7 @@ import SignUpManual from './pages/signUpManual';
 import UserLanding from './pages/userLandinfpage';
 import WriteReview from './pages/WriteReview';
 import PostReview from './pages/PostReview';
+import RebaAgent from './pages/rebaAgent';
 const router = createBrowserRouter([
   {
     path : "/",
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path : "/post-review",
     element : (<PostReview />)
+  },
+  {
+    path : "/reba-agent",
+    element : (<RebaAgent />)
   },
   
 ])

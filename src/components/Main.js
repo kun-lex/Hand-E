@@ -6,6 +6,7 @@ import slide2 from './images/slide 2.png'
 import slide3 from './images/slide 3.png'
 import ReviewPost from './reviewPost';
 import styled  from 'styled-components';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { db } from '../firebase';
 import { onSnapshot, collection } from 'firebase/firestore';
@@ -38,7 +39,7 @@ export default function Main() {
             <h2 className='text-black'>Get More From Your <br/> 
               Profession
             </h2>
-            <button className=' w-[130px] h-[35px] bg-[#081E40] rounded-[15px] items-center justify-center text-white '>Learn More</button>
+            <Link to='/reba-agent'><button className=' w-[130px] h-[35px] bg-[#081E40] rounded-[15px] items-center justify-center text-white '>Learn More</button></Link>
           </div>
         </div>
         <ImageSlider 
@@ -76,7 +77,7 @@ export default function Main() {
           <h5 className='justify-center ml-[30%]'>Quick Fix?</h5>
         </div>
         {/* categories and svgs */}
-        <div className='flex justify-center justify-evenly mb-[20px] m-[50px] ' >
+        <div className='flex justify-center space-x-20 mb-[20px] m-[50px] ' >
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
             <h3>Auto Services</h3>
@@ -93,7 +94,7 @@ export default function Main() {
 
         </div>
 
-        <div className='flex justify-center justify-evenly m-[50px] ' >
+        <div className='flex justify-center space-x-20 m-[50px] ' >
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
             <h3>Auto Services</h3>

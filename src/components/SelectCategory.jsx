@@ -81,7 +81,9 @@ const SelectCategory = () => {
     `;
     return(
         <WrapStyle>
-             <div>
+
+            {/* this is the main search style */}
+             {/* <div>
                 <input
                     type="text"
                     value={searchTerm}
@@ -90,10 +92,12 @@ const SelectCategory = () => {
                 />
                 <ul>
                     {searchResults.map((item) => (
-                    <li key={item.id}>{item.name}</li>
+                    <li key={item.id}>{item.name}</li>,
+                    <li>Home Service</li>
                     ))}
+                    
                 </ul>
-            </div>
+            </div> */}
                     
             <Select
                 placeholder='Search anything...'
