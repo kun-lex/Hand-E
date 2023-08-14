@@ -1,7 +1,7 @@
 import chevron from './icons/chevron.svg';
 import './App.css';
 import { Link } from "react-router-dom";
-import NewLogo from './images/Reba logo.png'
+import Logo from './images/hand-i icon (2).png';
 import SelectCategory from './SelectCategory';
 import  styled  from 'styled-components';
 import carDetail from './icons/cardetailinglogo.svg';
@@ -22,7 +22,7 @@ export default function Navbar(){
       <NavStyle>
         <nav className="navbar">
           <Link to='/'>
-          <div className="nav-title ml-[10px] w-full "><img className='object-contain' src={NewLogo} alt="logo" /></div>
+          <div className="nav-title ml-[10px] w-full "><img className='object-contain' src={Logo} alt="logo" /></div>
           </Link>
             
           <div className="dropdowns">

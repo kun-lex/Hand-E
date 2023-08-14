@@ -1,11 +1,9 @@
 import './App.css';
-import profile_pic from './images/profilepic.png';
 import ImageSlider from './imageSlider';
 import slide1 from './images/join-us pic.png'
 import slide2 from './images/slide 2.png'
 import slide3 from './images/slide 3.png'
 import ReviewPost from './reviewPost';
-import styled  from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { db } from '../firebase';
@@ -61,7 +59,7 @@ export default function Main() {
         </div>
         <div className='flex items-center justify-center'>
         {
-          reviews.map((review) => (
+          reviews.map((id, review) => (
             <ReviewPost key={review.id} username={review.username} imageUrl={review.imageUrl} />
           ))
         }
@@ -69,7 +67,7 @@ export default function Main() {
       </div>
       <div>
         <div
-          className=' flex items-center w-full  '
+          className=' flex items-center w-full '
         >
           <div style={{ position: 'relative', display: 'flex' , alignItems: 'flex-start', justifyContent: 'start'}}>
             <img src={groupdesign} alt='group-design' className='w-[200px] h-[200px] ' />
@@ -80,16 +78,18 @@ export default function Main() {
         <div className='flex justify-center space-x-20 mb-[20px] m-[50px] ' >
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
-            <h3>Auto Services</h3>
+            <h3 className=' text-blue-800 text-[20px] '>Auto Repair</h3>
             <img className='mt-[20px]' src={carRepair} alt='auto' /> 
           </div>
 
-          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
-            <img src={carRepair} alt='auto' /> 
+          <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <h3>Plumber</h3>
+            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
           </div>
 
-          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
-            <img src={carRepair} alt='auto' /> 
+          <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <h3>Towing Service</h3>
+            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
           </div>
 
         </div>
@@ -97,16 +97,18 @@ export default function Main() {
         <div className='flex justify-center space-x-20 m-[50px] ' >
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
-            <h3>Auto Services</h3>
+            <h3>Electrican</h3>
             <img className='mt-[20px]' src={carRepair} alt='auto' /> 
           </div>
 
-          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
-            <img src={carRepair} alt='auto' /> 
+          <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <h3>Contractor</h3>
+            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
           </div>
 
-          <div className='flex justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
-            <img src={carRepair} alt='auto' /> 
+          <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
+            <h3>Home Cleaner</h3>
+            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
           </div>
 
         </div>

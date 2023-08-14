@@ -9,7 +9,7 @@ const TextAnimation = ({ isVisible }) => {
       classNames="fade"
       unmountOnExit
     >
-      <h1 className="text-4xl font-bold text-center mt-10 text-blue-800 text-[30px] ">Unlocking More Job Opportunities!</h1>
+      <h1 className="text-4xl font-bold text-left mt-10 text-blue-800 text-[30px] items-start ">Unlocking <br/> More Job Opportunities!</h1>
     </CSSTransition>
   );
 };
