@@ -11,6 +11,10 @@ import UserLanding from './pages/userLandinfpage';
 import WriteReview from './pages/WriteReview';
 import PostReview from './pages/PostReview';
 import RebaAgent from './pages/rebaAgent';
+import ResetPassword from './pages/resetPassword';
+import ResetPasswordConfirm from './pages/resetPasswordconfirm';
+import Activate from './pages/activate';
+
 const router = createBrowserRouter([
   {
     path : "/",
@@ -43,6 +47,18 @@ const router = createBrowserRouter([
   {
     path : "/reba-agent",
     element : (<RebaAgent />)
+  },
+  {
+    path : "/reset-password",
+    element : (<ResetPassword />)
+  },
+  {
+    path : "/password/reset/confirm/:uid/:token",
+    element : (<ResetPasswordConfirm />)
+  },
+   {
+    path : "/activate/:uid/:token",
+    element : (<Activate />)
   },
   
 ])

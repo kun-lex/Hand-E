@@ -2,6 +2,7 @@ import chevron from './icons/chevron.svg';
 import './App.css';
 import { Link } from "react-router-dom";
 import Logo from './images/hand-i icon (2).png';
+import LogoIcon from './images/new icon.png';
 import SelectCategory from './SelectCategory';
 import  styled  from 'styled-components';
 import carDetail from './icons/cardetailinglogo.svg';
@@ -19,10 +20,27 @@ export default function Navbar(){
         
     `;
     return(
-      <NavStyle>
+      <div>
         <nav className="navbar">
           <Link to='/'>
-          <div className="nav-title ml-[10px] w-full "><img className='object-contain' src={Logo} alt="logo" /></div>
+          {/* <div className="nav-title ml-[10px] w-full "><img className='object-contain' src={Logo} alt="logo" /></div> */}
+            <div className=' relative hidden lg:inline-grid w-24 cursor-pointer' >
+                <img 
+                    src={Logo}
+                    fill
+                    alt='logo'
+                    style={{objectFit:"contain"}}
+                    
+                />
+            </div>
+            <div className='relative w-10 lg:hidden flex-shrink-0 cursor-pointer nav-title' >
+                <img 
+                    src={LogoIcon}
+                    fill
+                    alt='logo'
+                    style={{objectFit:"contain"}}
+                />
+            </div>
           </Link>
             
           <div className="dropdowns">
@@ -109,6 +127,6 @@ export default function Navbar(){
         <div className=' w-11/12 sm:w-[60%] mx-auto mt-[20px]  '>
           <SelectCategory/>
         </div>
-      </NavStyle>
+      </div>
     )
 }

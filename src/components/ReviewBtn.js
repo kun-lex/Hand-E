@@ -8,7 +8,7 @@ const ReviewBtn = () => {
                     style={{
                         position: "fixed",
                         bottom: "50px",
-                        right: "50px",
+                        right: "10px",
                         height: "35px",
                         width: "130px",
                         backgroundColor: "#081E40",
