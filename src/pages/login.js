@@ -4,26 +4,37 @@ import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
 import GoogleIcon from '../components/images/icons8-google-48.png'
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useState } from 'react';
-import { auth } from '../firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { connect } from "react-redux"
+import { login } from '../actions/auth';
 
-export default function Login(){
-    const [email, setEmail] = useState([]);
-    const [password, setPassword] = useState([]);
+const Login = ({ login }) => {
+    const [FormData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
 
-    const signIn = (e) => {
+    const { email, password } = FormData;
+
+    const onChange = e => setFormData({ ...FormData, [e.target.name]: e.target.value });
+    const onSubmit = e => {
         e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential)
-        }).catch((error) => {
-            console.log(error)
-        }
-        
-        )
+
+        login(email, password);
     }
+
+    // const signIn = (e) => {
+    //     e.preventDefault();
+    //     signInWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         console.log(userCredential)
+    //     }).catch((error) => {
+    //         console.log(error)
+    //     }
+        
+    //     )
+    // }
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
             display : none;
@@ -40,7 +51,7 @@ export default function Login(){
                 <div className='flex'>
                     <form 
                         className='flex flex-col items-center'
-                        onSubmit={signIn}
+                        onSubmit={e => onSubmit(e)}
                     >
                         <h1 style={{
                             color:"#081E40",
@@ -63,7 +74,8 @@ export default function Login(){
                             type="text"
                             placeholder='Username or Email'
                             value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={e => onChange(e)}
+                            required
                         />
                         <input
                             style={{
@@ -77,7 +89,9 @@ export default function Login(){
                             type="password"
                             placeholder='Password'
                             value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            onChange={e => onChange(e)}
+                            minLength = {6}
+                            required
                         />
                         <button
                             style={{
@@ -94,10 +108,16 @@ export default function Login(){
                             }}
                             type='submit'
                         >Sign In</button>
-                        <a className='cursor-pointer' >Forgot Password ?</a>
+
+                        {/* Reset password */}
+                        <Link to='/reset-password' >
+                            <a className='cursor-pointer' >Forgot Password ?</a>
+                        </Link>
+
                         <div className='flex items-center '>
                             <h5 className=' p-[5px] ' >or</h5>
                         </div>
+
                         <button
                             style={{
                                 width: '300px',
@@ -109,8 +129,11 @@ export default function Login(){
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 marginBottom: '10px'
-                            }}
-                        > <img src={GoogleIcon} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> Continue with Google</button>
+                            }}>
+                            <img src={GoogleIcon} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> 
+                            Continue with Google
+                        </button>
+
                         <p className='text-black' >Don't have an Account ?</p>
                         <Link to="/sign-up">
                             <button
@@ -144,5 +167,11 @@ export default function Login(){
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+const mapStateToProps = state => ({
+    // authError: getAuthErrorMessage(state),
+})
+
+export default connect(null, { login })(Login);
