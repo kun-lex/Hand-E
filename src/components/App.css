@@ -103,7 +103,7 @@ button > img {
 }
 
 .dropdowns {
-  margin-right: auto;
+  /* margin-right: auto; */
   left: -9999px;
   z-index: 2;
   height: 100%;
@@ -112,7 +112,7 @@ button > img {
   align-items: flex-start;
   justify-content: center;
   padding-left: 50px;
-  background: #0d0d0e;
+  background: white;
   opacity: 0;
   visibility: hidden;
   transition-property: opacity, visibility;
