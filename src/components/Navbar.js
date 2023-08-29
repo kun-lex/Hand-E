@@ -14,8 +14,7 @@ export default function Navbar(){
   };
 
   return (
-    <div>
-      <nav className="justify-between max-w-6xl mx-5 lg:mx-auto">
+      <nav className="justify-between max-w-5xl mx-4 lg:mx-auto mt-5">
       <div className="flex items-center justify-between">
         <Link to='/'>
             <div className=' relative hidden lg:inline-grid w-24 cursor-pointer' >
@@ -161,11 +160,10 @@ export default function Navbar(){
           <a href="#" className="block text-white">Reba For Business</a>
         </div>
       )}
-    </nav>
-      <div className=' w-11/12 sm:w-[60%] mx-auto mt-[20px]  '>
+      {/* <div className=' w-11/12 sm:w-[60%] mx-auto mt-[20px]  '>
           <SelectCategory/>
-        </div>
-    </div>
+        </div> */}
+    </nav>
   );
         
 }

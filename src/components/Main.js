@@ -48,19 +48,15 @@ export default function Main() {
       </div>
       <div className='bg-[#9d9d9d] '>
         <div className='flex items-center justify-center'>
-          <h2 style={{color:"white"}}>Recent Activity</h2>
-        </div>
-        <div className='flex items-center justify-center'>
-          <div className='flex flex-row justify-between items-center m-0 w-[20%] text-white '>
+          <div className='flex justify-between items-center space-x-20 text-white mt-5 '>
             <button>Nearby</button>
-            <button>Friends</button>
             <button>Following</button>
           </div>
         </div>
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center mt-5'>
         {
           reviews.map((id, review) => (
-            <ReviewPost key={review.id} username={review.username} imageUrl={review.imageUrl} />
+            <ReviewPost id={id.id} key={review.id} username={review.username} imageUrl={review.imageUrl} />
           ))
         }
         </div>
@@ -72,7 +68,6 @@ export default function Main() {
           <div style={{ position: 'relative', display: 'flex' , alignItems: 'flex-start', justifyContent: 'start'}}>
             <img src={groupdesign} alt='group-design' className='w-[200px] h-[200px] ' />
           </div>
-          <h5 className='justify-center ml-[30%]'>Quick Fix?</h5>
         </div>
         {/* categories and svgs */}
         <div className='flex justify-center space-x-20 mb-[20px] m-[50px] ' >
@@ -120,7 +115,6 @@ export default function Main() {
         </div>
       </div>
       <ReviewBtn/>
-      <ScrollUpBtn/>
     </main>
   )
 }

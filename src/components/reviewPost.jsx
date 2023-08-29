@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css'
 import profile_pic from './images/profilepic.png';
-import StarRating from './starrate';
 
 const ReviewPost = ({username, imageUrl}) => {
     return (
@@ -30,8 +29,6 @@ const ReviewPost = ({username, imageUrl}) => {
                 }}
               />
             </div>
-
-            {/* <StarRating/> */}
           </div>
         </div>
     )
