@@ -23,6 +23,28 @@ const Login = ({ login }) => {
 
         login(email, password);
     }
+    const continueWithGoogle = async () => {
+        try {
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/o/google-oauth2/?redirect_uri=${process.env.REACT_APP_API_URL}/google`)
+
+            window.location.replace(res.data.authorization_url);
+        } catch (err) {
+
+        }
+    };
+    const continueWithFacebook = async () => {
+        try {
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/o/facebook/?redirect_uri=${process.env.REACT_APP_API_URL}/facebook`)
+
+            window.location.replace(res.data.authorization_url);
+        } catch (err) {
+
+        }
+    };
+
+    if (isAuthenticated) {
+        return <Redirect to='/' />
+    }
 
     // const signIn = (e) => {
     //     e.preventDefault();
@@ -130,7 +152,7 @@ const Login = ({ login }) => {
                                 justifyContent: 'center',
                                 marginBottom: '10px'
                             }}>
-                            <img src={GoogleIcon} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> 
+                            <img src={GoogleIcon} onClick={continueWithGoogle} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> 
                             Continue with Google
                         </button>
 
@@ -171,7 +193,7 @@ const Login = ({ login }) => {
 };
 
 const mapStateToProps = state => ({
-    // authError: getAuthErrorMessage(state),
-})
+   isAuthenticated: state.auth.isAuthenticated
+});
 
-export default connect(null, { login })(Login);
+export default connect(mapStateToProps, { login })(Login);
