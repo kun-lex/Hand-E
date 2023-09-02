@@ -6,8 +6,6 @@ import slide3 from './images/slide 3.png'
 import ReviewPost from './reviewPost';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { db } from '../firebase';
-import { onSnapshot, collection } from 'firebase/firestore';
 import groupdesign from './icons/gruopdesign.png';
 import groupdesigntwo from './icons/groupdesigntwo.png'
 import carRepair from './icons/carrepairlogo.svg';
@@ -16,16 +14,16 @@ import ScrollUpBtn from './ScrollUpbtn';
 // import LiveSearchBar from './demoSearch';
 
 export default function Main() {
-  const [ reviews, setReviews ] = useState([]);
+  // const [ reviews, setReviews ] = useState([]);
   const images = [
     slide1, slide2, slide3,
   ];
 
-  useEffect(()=> 
-    onSnapshot(collection(db, "posts"), (snapshot) => 
-      setReviews(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
-    )
-  , [])
+  // useEffect(()=> 
+  //   onSnapshot(collection(db, "posts"), (snapshot) => 
+  //     setReviews(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})))
+  //   )
+  // , [])
 
   return(
     <main>
@@ -54,11 +52,11 @@ export default function Main() {
           </div>
         </div>
         <div className='flex items-center justify-center mt-5'>
-        {
+        {/* {
           reviews.map((id, review) => (
             <ReviewPost id={id.id} key={review.id} username={review.username} imageUrl={review.imageUrl} />
           ))
-        }
+        } */}
         </div>
       </div>
       <div>

@@ -4,24 +4,22 @@ import GoogleIcon from '../components/images/icons8-google-48.png'
 import { Link } from "react-router-dom";
 import NewLogo from '../components/images/Reba logo.png';
 import { useState } from 'react';
-import { auth } from '../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const SignUp = () => {
     const [email, setEmail] = useState([]);
     const [password, setPassword] = useState([]);
 
-    const signUp = (e) => {
-        e.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential)
-        }).catch((error) => {
-            console.log(error)
-        }
+    // const signUp = (e) => {
+    //     e.preventDefault();
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         console.log(userCredential)
+    //     }).catch((error) => {
+    //         console.log(error)
+    //     }
         
-        )
-    }
+    //     )
+    // }
 
 
     const WrapStyle = styled.div`

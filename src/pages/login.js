@@ -4,12 +4,13 @@ import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
 import GoogleIcon from '../components/images/icons8-google-48.png'
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import { connect } from "react-redux"
 import { login } from '../actions/auth';
+import axios from 'axios';
 
-const Login = ({ login }) => {
+const Login = ({ login, isAuthenticated }) => {
     const [FormData, setFormData] = useState({
         email: '',
         password: ''
@@ -43,7 +44,7 @@ const Login = ({ login }) => {
     };
 
     if (isAuthenticated) {
-        return <Redirect to='/' />
+        return <Navigate to='/' />
     }
 
     // const signIn = (e) => {
@@ -93,8 +94,9 @@ const Login = ({ login }) => {
                                 padding: '10px',
                                 marginBottom: '20px'
                             }}
-                            type="text"
+                            type="email"
                             placeholder='Username or Email'
+                            name='email'
                             value={email}
                             onChange={e => onChange(e)}
                             required
@@ -110,6 +112,7 @@ const Login = ({ login }) => {
                             }}
                             type="password"
                             placeholder='Password'
+                            name='password'
                             value={password}
                             onChange={e => onChange(e)}
                             minLength = {6}

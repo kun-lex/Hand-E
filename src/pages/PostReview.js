@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { db, storage } from '../firebase';
-import  {ref}  from 'firebase/storage';
 import NavbarOne from '../components/navbarOne';
 import StarRating from '../components/starrate';
 
@@ -26,36 +24,36 @@ const PostReview = () => {
     setImage(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      // Upload the image to Firebase Storage
-      const storageRef = ref(storage); 
-      const imageRef = storageRef.child(image.name);
-      await imageRef.put(image);
+  //   try {
+  //     // Upload the image to Firebase Storage
+  //     const storageRef = ref(storage); 
+  //     const imageRef = storageRef.child(image.name);
+  //     await imageRef.put(image);
 
-      // Get the download URL of the uploaded image
-      const imageUrl = await imageRef.getDownloadURL();
+  //     // Get the download URL of the uploaded image
+  //     const imageUrl = await imageRef.getDownloadURL();
 
-      // Save the data (caption and image URL) to Firebase Firestore
-      await db.collection('posts').add({
-        caption,
-        imageUrl,
-      });
+  //     // Save the data (caption and image URL) to Firebase Firestore
+  //     await db.collection('posts').add({
+  //       caption,
+  //       imageUrl,
+  //     });
 
-      // Clear form fields after successful submission
-      setCaption('');
-      setImage(null);
-    } catch (error) {
-      console.error('Error uploading image:', error);
-    }
-  };
+  //     // Clear form fields after successful submission
+  //     setCaption('');
+  //     setImage(null);
+  //   } catch (error) {
+  //     console.error('Error uploading image:', error);
+  //   }
+  // };
 
   return (
     <div>
       <NavbarOne/>
-      <form className=' mt-40 ml-52 ' onSubmit={handleSubmit}>
+      <form className=' mt-40 ml-52 ' onSubmit={''}>
         <StarRating
           totalStars={5}
           initialRating={rating}

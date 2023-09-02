@@ -4,8 +4,6 @@
 // import { Link } from "react-router-dom";
 import NewLogo from '../components/images/Reba logo.png';
 import { useState } from 'react';
-import { auth } from '../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import GeoLocation from '../components/geolocation';
 import { useNavigate } from 'react-router-dom'
 
@@ -14,18 +12,18 @@ const SignUpManual = () => {
     const [password, setPassword] = useState([]);
     const navigate = useNavigate();
 
-    const signUp = (e) => {
-        e.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential)
-        }).catch((error) => {
-            console.log(error)
-        }
+    // const signUp = (e) => {
+    //     e.preventDefault();
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //         console.log(userCredential)
+    //     }).catch((error) => {
+    //         console.log(error)
+    //     }
         
-        )
-        navigate('/home');
-    }
+    //     )
+    //     navigate('/home');
+    // }
 
 
     // const WrapStyle = styled.div`
@@ -41,7 +39,7 @@ const SignUpManual = () => {
                 <div className='flex flex-col items-center'>
                     <form 
                         className='flex flex-col items-center'
-                        onSubmit={signUp}
+                        onSubmit={''}
                     >
                         <h1 style={{
                             color:"#081E40",
