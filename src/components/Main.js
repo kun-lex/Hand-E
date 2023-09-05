@@ -127,12 +127,12 @@ export default function Main() {
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
             <h3 className=' text-blue-800 text-[20px] '>Auto Repair</h3>
-            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
+            <img className='mt-[20px]' src={autoIcon} alt='auto' /> 
           </div>
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
             <h3>Plumber</h3>
-            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
+            <img className='mt-[20px]' src={tapIcon} alt='auto' /> 
           </div>
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
@@ -156,7 +156,7 @@ export default function Main() {
 
           <div className=' flex flex-col justify-center items-center w-[250px] h-[250px] bg-[#acacac]' >
             <h3>Home Cleaner</h3>
-            <img className='mt-[20px]' src={carRepair} alt='auto' /> 
+            <img className='mt-[20px]' src={cleanIcon} alt='auto' /> 
           </div>
 
         </div>
