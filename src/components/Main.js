@@ -10,7 +10,14 @@ import groupdesign from './icons/gruopdesign.png';
 import groupdesigntwo from './icons/groupdesigntwo.png'
 import carRepair from './icons/carrepairlogo.svg';
 import ReviewBtn from './ReviewBtn';
-import ScrollUpBtn from './ScrollUpbtn';
+import cleanIcon from './icons/arcticons_cache-cleaner.png';
+import tapIcon from './icons/game-icons_tap.png';
+import schoolIcon from './icons/ic_outline-school.png';
+import foodIcon from './icons/mdi_food-outline.png';
+import autoIcon from './icons/mdi_mechanic.png';
+import moverIcon from './icons/mdi_truck-outline.png';
+import hotelIcon from './icons/ri_hotel-line.png';
+import moreIcon from './icons/ri_more-fill.png';
 // import LiveSearchBar from './demoSearch';
 
 export default function Main() {
@@ -27,39 +34,87 @@ export default function Main() {
 
   return(
     <main>
-      {/* <LiveSearchBar/> */}
-      <div className="flex justify-center items-center mt-[30px] ">
-        <div className='mr-[50px] '>
-          <div>
-            <h1 className='work-text' >Work with us</h1>
-            <h2 className='text-black'>Get More From Your <br/> 
-              Profession
-            </h2>
-            <Link to='/reba-agent'><button className=' w-[130px] h-[35px] bg-[#081E40] rounded-[15px] items-center justify-center text-white '>Learn More</button></Link>
+      <div className='flex flex-col justify-center items-center mt-10 lg:hidden' >
+        <div className='flex space-x-10 ' >
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={foodIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Take Out</h3>
+          </div>
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={hotelIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Hotels</h3>
+          </div>
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={schoolIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Education</h3>
+          </div>
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={autoIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Auto Repair</h3>
           </div>
         </div>
-        <ImageSlider 
-          className='object-contain'
-          images={images} 
-          interval={4000}
-        />
-      </div>
-      <div className='bg-[#9d9d9d] '>
-        <div className='flex items-center justify-center'>
-          <div className='flex justify-between items-center space-x-20 text-white mt-5 '>
-            <button>Nearby</button>
-            <button>Following</button>
+
+        <div className='flex space-x-10 mt-10 ' >
+        
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={moverIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Movers</h3>
+          </div>
+          
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={tapIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Plumber</h3>
+          </div>
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={cleanIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>Home cleaner</h3>
+          </div>
+
+          <div className=' flex flex-col justify-center items-center' >
+            <img className='object-contain w-10 h-10' src={moreIcon} alt='auto' />
+            <h3 className=' text-blue-800 text-[12px] '>more</h3>
           </div>
         </div>
-        <div className='flex items-center justify-center mt-5'>
-        {/* {
-          reviews.map((id, review) => (
-            <ReviewPost id={id.id} key={review.id} username={review.username} imageUrl={review.imageUrl} />
-          ))
-        } */}
-        </div>
       </div>
-      <div>
+
+        <div className="flex justify-center items-center mt-[30px] ">
+          <div className='mr-[50px] '>
+            <div>
+              <h1 className='work-text' >Work with us</h1>
+              <h2 className='text-black'>Get More From Your <br/> 
+                Profession
+              </h2>
+              <Link to='/reba-agent'><button className=' w-[130px] h-[35px] bg-[#1D5EBF] rounded-[15px] items-center justify-center text-white '>Learn More</button></Link>
+            </div>
+          </div>
+          <ImageSlider 
+            className='object-contain'
+            images={images} 
+            interval={4000}
+          />
+        </div>
+        <div className='bg-[#9d9d9d] '>
+          <div className='flex items-center justify-center'>
+            <div className='flex justify-between items-center space-x-20 text-white mt-5 '>
+              <button>Nearby</button>
+              <button>Following</button>
+            </div>
+          </div>
+          <div className='flex items-center justify-center mt-5'>
+          {/* {
+            reviews.map((id, review) => (
+              <ReviewPost id={id.id} key={review.id} username={review.username} imageUrl={review.imageUrl} />
+            ))
+          } */}
+          </div>
+        </div>
+      <div className=' hidden lg:block ' >
         <div
           className=' flex items-center w-full '
         >

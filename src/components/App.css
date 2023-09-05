@@ -149,8 +149,7 @@ button > img {
 .dropdown {
   position: relative;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+  flex-direction: row;
 }
 
 @media (width >= 500px) {
@@ -163,13 +162,14 @@ button > img {
 
   .dropdown-menu {
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 0;
     display: flex;
     gap: 32px;
     padding: 6px 24px 20px;
     margin-bottom: 0;
     justify-content: flex-start;
+    z-index: 2;
     background: #081E40;
     opacity: 0;
     visibility: hidden;

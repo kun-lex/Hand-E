@@ -1,9 +1,6 @@
 import search from './icons/search.svg';
-import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
-
 
 const SelectCategory = () => {
     const [ query, setQuery ] = useState('');
@@ -33,50 +30,58 @@ const SelectCategory = () => {
                 console.log(error);
             })
     }, [query]);
-
-
-   
-    const WrapStyle = styled.div`
-        @media (max-width : 700px) {
-            display : flex;
-            flex-wrap : wrap;
-            flex-direction : column;
-            align-items : center;
-            justify-content : center;
-        }
-        @media (min-width: 700px ){
-            display : flex;
-            align-items : center;
-            justify-content : center;
-        }
-    `;
     return(
-        <WrapStyle>
+        <div className='flex flex-col justify-center items-center' >
+            <div className='hidden lg:inline-flex' >
+                <div>
+                    <input 
+                        type='text'
+                        placeholder='Search anything......'
+                        name='search'
+                        value={list}
+                        onChange={handleSearch}
+                        className='h-9 w-64 rounded-l-lg'
+                    />
+                    <ul>
+                        {results.map((items) => (
+                            <li key={items.id}>
+                                <h2>{items.name}</h2>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-            {/* location search */}
-            <div>
-                <input 
-                    type='text'
-                    placeholder='Location'
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                />
-                <ul>
-                    {location.map((location) => (
-                        <li key={location.id}>
-                            <h2>{location.name}</h2>
-                            <p> {location.description2} </p>
-                        </li>
-                    ))}
-                </ul>
+                {/* location search */}
+                <div>
+                    <input 
+                        type='text'
+                        placeholder='Location'
+                        name='Location'
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        className='h-9 w-64'
+                    />
+                    <ul>
+                        {location.map((location) => (
+                            <li key={location.id}>
+                                <h2>{location.name}</h2>
+                                <p> {location.description2} </p>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <button className=' flex bg-[#1D5EBF] rounded-r-lg w-10 h-9 items-center justify-center'><img src={search}  alt="search" /></button>
             </div>
-
+            <div className='space-y-2 lg:hidden' >
             <div>
                 <input 
                     type='text'
                     placeholder='Search anything......'
+                    name='search'
                     value={list}
                     onChange={handleSearch}
+                    className='h-7 w-64 rounded-full'
                 />
                 <ul>
                     {results.map((items) => (
@@ -87,8 +92,28 @@ const SelectCategory = () => {
                 </ul>
             </div>
 
-            <button className=' flex bg-[#081E40] rounded-r-lg w-20 h-9 items-center justify-center'><img src={search}  alt="search" /></button>
-        </WrapStyle>
+            {/* location search */}
+            <div className='flex'>
+                <input 
+                    type='text'
+                    placeholder='Location'
+                    name='Location'
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    className='h-7 w-52 rounded-l-full'
+                />
+                <ul>
+                    {location.map((location) => (
+                        <li key={location.id}>
+                            <h2>{location.name}</h2>
+                            <p> {location.description2} </p>
+                        </li>
+                    ))}
+                </ul>
+                <button className=' flex bg-[#1D5EBF] rounded-r-lg w-12 h-7 items-center justify-center'><img src={search}  alt="search" /></button>
+            </div>
+            </div>
+        </div>
     )
 }
 export default SelectCategory;
