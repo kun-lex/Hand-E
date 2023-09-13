@@ -1,5 +1,4 @@
 import '../components/App.css'
-import NewLogo from '../components/images/Reba logo.png'
 import NavbarOne from '../components/navbarOne';
 import loginimg from '../components/icons/undraw_login_re_4vu2.svg'
 import styled from 'styled-components';
@@ -47,17 +46,6 @@ const Login = ({ login, isAuthenticated }) => {
         return <Navigate to='/' />
     }
 
-    // const signIn = (e) => {
-    //     e.preventDefault();
-    //     signInWithEmailAndPassword(auth, email, password)
-    //     .then((userCredential) => {
-    //         console.log(userCredential)
-    //     }).catch((error) => {
-    //         console.log(error)
-    //     }
-        
-    //     )
-    // }
     const WrapStyle = styled.div`
         @media (max-width : 700px) {
             display : none;
@@ -69,7 +57,7 @@ const Login = ({ login, isAuthenticated }) => {
     `;
     return(
         <div>
-            <img src={NewLogo} alt='reba logo' />
+            <NavbarOne />
             <div className='flex items-center justify-center w-full mt-[50px]'>
                 <div className='flex'>
                     <form 
@@ -136,12 +124,28 @@ const Login = ({ login, isAuthenticated }) => {
 
                         {/* Reset password */}
                         <Link to='/reset-password' >
-                            <a className='cursor-pointer' >Forgot Password ?</a>
+                            <button className='cursor-pointer' >Forgot Password ?</button>
                         </Link>
 
                         <div className='flex items-center '>
                             <h5 className=' p-[5px] ' >or</h5>
                         </div>
+
+                        <button
+                            style={{
+                                width: '300px',
+                                height: '40px',
+                                borderRadius: '32px',
+                                background: 'black',
+                                color: 'white',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                marginBottom: '10px'
+                            }}>
+                            <img src={GoogleIcon} onClick={continueWithFacebook} className=' w-[20px] h-[20px] flex items-center ' alt='google' /> 
+                            Continue with Google
+                        </button>
 
                         <button
                             style={{

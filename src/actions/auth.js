@@ -1,4 +1,3 @@
-import { json } from 'react-router-dom';
 import axios from 'axios';
 import {
     LOGIN_SUCCESS,
@@ -29,7 +28,7 @@ export const load_user = () => async dispatch => {
                 'Content-Type': 'application/json',
                 // use back tick
                 'Authorization': `JWT ${localStorage.getItem('access')}`,
-                'Accept': 'application/json'
+                'Accept': 'application/json',
             }
         };
 
@@ -216,7 +215,7 @@ export const verify = (uid, token) => async dispacth => {
     });
 
     try {
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/activation`, body, config);
+        await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/activation`, body, config);
 
         dispacth({
             type: ACTIVATION_SUCCESS
@@ -240,7 +239,7 @@ export const reset_password = (email) => async dispacth => {
     });
 
     try {
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/reset_password`, body, config);
+        await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/reset_password`, body, config);
 
         dispacth({
             type: PASSWORD_RESET_SUCCESS
@@ -264,7 +263,7 @@ export const reset_password_confirm = (uid, token, new_password, re_new_password
     });
 
     try {
-        const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/reset_password_confirm`, body, config);
+        await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/reset_password_confirm`, body, config);
 
         dispacth({
             type: PASSWORD_RESET_CONFIRM_SUCCESS

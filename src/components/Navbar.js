@@ -84,7 +84,7 @@ export default function Navbar(){
         </div>
         <div className="hidden items-center md:flex ">
           <div className="dropdown">
-            <a className='flex items-center text-[#081E40] text-[15px] cursor-pointer mr-[10px] ' >
+            <a href='/' className='flex items-center text-[#081E40] text-[15px] cursor-pointer mr-[10px] ' >
             Auto Services
             <img src={chevron}  alt="chevron"/>
             </a>
@@ -104,7 +104,7 @@ export default function Navbar(){
             </div>
           </div>
           <div className="dropdown">
-            <a className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
+            <a href='/' className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
               Home Services
               <img src={chevron}  alt="chevron" />
             </a>
@@ -124,7 +124,7 @@ export default function Navbar(){
             </div>
           </div>
           <div className="dropdown">
-            <a className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
+            <a href='/' className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
               Reba For Business
               <img src={chevron}  alt="chevron" />
             </a>
@@ -138,7 +138,7 @@ export default function Navbar(){
           </div>
           <div className='flex' >
           <Link to="/login">
-              <a className='flex text-[#081E40] text-[12px] cursor-pointer '
+              <button href='/' className='flex text-[#081E40] text-[12px] cursor-pointer '
               style={{
                   width : '50px',
                   height: '30px',
@@ -146,10 +146,10 @@ export default function Navbar(){
                   alignItems: 'center',
                   justifyContent: 'center'
               }}
-              >Log In</a>
+              >Log In</button>
           </Link>
           <Link to="/sign-up">
-              <a className='flex items-center text-[12px] cursor-pointer mr-[10px] '
+              <button className='flex items-center text-[12px] cursor-pointer mr-[10px] '
               style={{
                   width : '70px',
                   height: '30px',
@@ -159,18 +159,18 @@ export default function Navbar(){
                   alignItems: 'center',
                   justifyContent: 'center'
               }}
-              >Sign Up</a>
+              >Sign Up</button>
           </Link>
           </div>
         </div>
       </div>
       {isOpen && (
         <div className="md:hidden mt-4 space-y-1">
-          <a href="#" className="block text-white">Auto Services</a>
-          <a href="#" className="block text-white">Home Services</a>
-          <a href="#" className="block text-white">Reba For Business</a>
+          <a href="/" className="block text-white">Auto Services</a>
+          <a href="/" className="block text-white">Home Services</a>
+          <a href="/" className="block text-white">Reba For Business</a>
           <Link to="/login">
-              <a className='text-[12px] cursor-pointer '
+              <button className='text-[12px] cursor-pointer '
               style={{
                   width : '50px',
                   height: '30px',
@@ -178,10 +178,10 @@ export default function Navbar(){
                   alignItems: 'center',
                   justifyContent: 'center'
               }}
-              >Log In</a>
+              >Log In</button>
           </Link>
           <Link to="/sign-up">
-              <a className='flex  text-[12px] cursor-pointer '
+              <button className='flex  text-[12px] cursor-pointer '
               style={{
                   width : '70px',
                   height: '30px',
@@ -191,7 +191,7 @@ export default function Navbar(){
                   alignItems: 'center',
                   justifyContent: 'center'
               }}
-              >Sign Up</a>
+              >Sign Up</button>
           </Link>
         </div>
       )}

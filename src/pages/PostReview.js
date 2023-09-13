@@ -3,17 +3,12 @@ import NavbarOne from '../components/navbarOne';
 import StarRating from '../components/starrate';
 
 const PostReview = () => {
-  const [title, setTitle] = useState('');
   const [caption, setCaption] = useState('');
   const [image, setImage] = useState(null);
   const [rating, setRating] = useState(0);
 
   const handleRatingChange = (newRating) => {
     setRating(newRating);
-  };
-
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
   };
 
   const handleCaptionChange = (e) => {
@@ -23,32 +18,6 @@ const PostReview = () => {
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
   };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     // Upload the image to Firebase Storage
-  //     const storageRef = ref(storage); 
-  //     const imageRef = storageRef.child(image.name);
-  //     await imageRef.put(image);
-
-  //     // Get the download URL of the uploaded image
-  //     const imageUrl = await imageRef.getDownloadURL();
-
-  //     // Save the data (caption and image URL) to Firebase Firestore
-  //     await db.collection('posts').add({
-  //       caption,
-  //       imageUrl,
-  //     });
-
-  //     // Clear form fields after successful submission
-  //     setCaption('');
-  //     setImage(null);
-  //   } catch (error) {
-  //     console.error('Error uploading image:', error);
-  //   }
-  // };
 
   return (
     <div>
@@ -82,6 +51,7 @@ const PostReview = () => {
             type="file"
             accept="image/*"
             id="image"
+            value={image}
             onChange={handleImageChange}
             required
           />

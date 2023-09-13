@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f71e544.css",
-    "main.js": "/static/js/main.dc859208.js",
+    "main.css": "/static/css/main.00ae59c1.css",
+    "main.js": "/static/js/main.9d98b297.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/profilepic.png": "/static/media/profilepic.6127945599c1b918d777.png",
     "static/media/slide 3.png": "/static/media/slide 3.1c00873fac39d11a28a2.png",
@@ -10,21 +10,19 @@
     "static/media/gruopdesign.png": "/static/media/gruopdesign.93ea5a686716cbeacfc8.png",
     "static/media/undraw_for_review_eqxk.svg": "/static/media/undraw_for_review_eqxk.175afd46a0cf38d49ef95ff2093ae4e3.svg",
     "static/media/undraw_login_re_4vu2.svg": "/static/media/undraw_login_re_4vu2.1e2555f4fa56fa7533367799ddcfc9ed.svg",
-    "static/media/cardetailinglogo.svg": "/static/media/cardetailinglogo.a3dcdab739c04704e5fbca91d4d76735.svg",
     "static/media/undraw_sign_up_n6im.svg": "/static/media/undraw_sign_up_n6im.7745c6f2bd33c1c9525e3051993bb81c.svg",
     "static/media/carrepairlogo.svg": "/static/media/carrepairlogo.2038a33792b013dcc7c026096b62547b.svg",
-    "static/media/carwashlogo.svg": "/static/media/carwashlogo.2038a33792b013dcc7c026096b62547b.svg",
     "index.html": "/index.html",
     "static/media/search.svg": "/static/media/search.aca1ed30d73498c33e52c354c7bd3132.svg",
     "static/media/close.svg": "/static/media/close.a6e719eeb05675cbe7cb.svg",
     "static/media/menu.svg": "/static/media/menu.88224f5f1ab347ac025d.svg",
     "static/media/chevron.svg": "/static/media/chevron.c3f662e41158c5aab79971a902082df0.svg",
-    "main.9f71e544.css.map": "/static/css/main.9f71e544.css.map",
-    "main.dc859208.js.map": "/static/js/main.dc859208.js.map",
+    "main.00ae59c1.css.map": "/static/css/main.00ae59c1.css.map",
+    "main.9d98b297.js.map": "/static/js/main.9d98b297.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f71e544.css",
-    "static/js/main.dc859208.js"
+    "static/css/main.00ae59c1.css",
+    "static/js/main.9d98b297.js"
   ]
 }
