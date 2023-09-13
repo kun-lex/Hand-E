@@ -125,7 +125,7 @@ export default function Navbar(){
           </div>
           <div className="dropdown">
             <a href='/' className='flex text-[#081E40] text-[15px] cursor-pointer mr-[10px] '>
-              Reba For Business
+              E For Business
               <img src={chevron}  alt="chevron" />
             </a>
             <div class="dropdown-menu">

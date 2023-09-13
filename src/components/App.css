@@ -214,11 +214,11 @@ button > img {
   margin-right: 30px;
   text-decoration: none;
 }
-a:-webkit-any-link {
+/* a:-webkit-any-link {
   text-decoration: none;
   color: white;
   cursor: pointer;
-}
+} */
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
