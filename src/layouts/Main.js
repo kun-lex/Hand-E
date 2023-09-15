@@ -4,8 +4,6 @@ import slide1 from '../components/images/join-us pic.png'
 import slide2 from '../components/images/slide 2.png'
 import slide3 from '../components/images/slide 3.png'
 import { Link } from 'react-router-dom';
-import groupdesign from '../components/icons/gruopdesign.png';
-import groupdesigntwo from '../components/icons/groupdesigntwo.png'
 import carRepair from '../components/icons/carrepairlogo.svg';
 import ReviewBtn from '../components/ReviewBtn';
 import cleanIcon from '../components/icons/arcticons_cache-cleaner.png';
@@ -105,13 +103,6 @@ export default function Main() {
           </div>
         </div>
       <div className=' hidden lg:block ' >
-        <div
-          className=' flex items-center w-full '
-        >
-          <div style={{ position: 'relative', display: 'flex' , alignItems: 'flex-start', justifyContent: 'start'}}>
-            <img src={groupdesign} alt='group-design' className='w-[200px] h-[200px] ' />
-          </div>
-        </div>
         {/* categories and svgs */}
         <div className='flex justify-center space-x-20 mb-[20px] m-[50px] ' >
 
@@ -149,12 +140,6 @@ export default function Main() {
             <img className='mt-[20px]' src={cleanIcon} alt='auto' /> 
           </div>
 
-        </div>
-        
-        <div
-          style={{ position: 'relative', display: 'flex' , alignItems: 'flex-end', justifyContent: 'end'}}
-        >
-        <img src={groupdesigntwo} alt='group-design' className='w-[200px] h-[200px]'/>
         </div>
       </div>
       <ReviewBtn/>
