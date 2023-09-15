@@ -17,7 +17,7 @@ const ReviewBtn = () => {
                     }}
                     className=" hidden lg:inline"
                 >Write a review</button>
-                {/* <button
+                <button
                     style={{
                         position: "fixed",
                         bottom: "40px",
@@ -32,8 +32,8 @@ const ReviewBtn = () => {
                         justifyContent: "center",
                         display: "flex",
                     }}
-                    className=" lg:hidden flex-shrink-0"
-                >+</button> */}
+                    className=" lg:hidden sm:inline flex-shrink-0"
+                >+</button>
             </Link>
         </div>
     )

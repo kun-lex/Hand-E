@@ -27,22 +27,22 @@ export default function Main() {
       <div className='flex flex-col justify-center items-center mt-10 lg:hidden' >
         <div className='flex space-x-10 ' >
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={foodIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Take Out</h3>
           </div>
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={hotelIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Hotels</h3>
           </div>
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={schoolIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Education</h3>
           </div>
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={autoIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Auto Repair</h3>
           </div>
@@ -50,23 +50,23 @@ export default function Main() {
 
         <div className='flex space-x-10 mt-10 ' >
         
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={moverIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Movers</h3>
           </div>
           
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={tapIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Plumber</h3>
           </div>
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={cleanIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>Home cleaner</h3>
           </div>
 
-          <div className=' flex flex-col justify-center items-center' >
+          <div className=' flex flex-col justify-center items-center cursor-pointer' >
             <img className='object-contain w-10 h-10' src={moreIcon} alt='auto' />
             <h3 className=' text-blue-800 text-[12px] '>more</h3>
           </div>

@@ -50,6 +50,9 @@ const SelectCategory = () => {
                         {results.map((items) => (
                             <li key={items.id}>
                                 <h2>{items.name}</h2>
+                                <h2>Home Services</h2>
+                                <h2>Auto Services</h2>
+                                <h2>Dentist</h2>
                             </li>
                         ))}
                     </ul>
